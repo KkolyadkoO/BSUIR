@@ -324,17 +324,11 @@ gmock_BINARY_DIR:STATIC=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_dep
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
 
-//Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;gtest;
-
 //Value Computed by CMake
 gmock_SOURCE_DIR:STATIC=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
-
-//Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
 googletest-distribution_BINARY_DIR:STATIC=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-build
@@ -369,9 +363,6 @@ gtest_force_shared_crt:BOOL=ON
 
 //Build gtest with internal symbols hidden in shared libraries.
 gtest_hide_internal_symbols:BOOL=OFF
-
-//Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
 my_project_BINARY_DIR:STATIC=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/test
@@ -560,10 +551,23 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9][cfound components: Interpreter ][v3.9.6()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9][cfound components: Interpreter ][v3.9.6()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;6;64;32;;cpython-39-darwin;abi3;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9;/Library/Python/3.9/site-packages;/Library/Python/3.9/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=7b21c1b9d5bd8c140cdee9cb9cb472b8
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure

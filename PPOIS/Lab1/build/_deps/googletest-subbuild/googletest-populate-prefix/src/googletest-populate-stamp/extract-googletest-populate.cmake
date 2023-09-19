@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.5)
 
 # Make file names absolute:
 #
-get_filename_component(filename "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9dfd640b249b4be3799d395.zip" ABSOLUTE)
+get_filename_component(filename "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/adc514538678a61b13c240f7b41babbc03b2ac24.zip" ABSOLUTE)
 get_filename_component(directory "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...

@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgmock.a"
+			"path" : "lib/libgmock_main.a"
 		}
 	],
 	"backtrace" : 3,
@@ -35,37 +35,37 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 97,
+				"line" : 99,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 213,
+				"line" : 210,
 				"parent" : 1
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 159,
+				"line" : 165,
 				"parent" : 2
 			},
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 120,
+				"line" : 115,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 330,
+				"line" : 303,
 				"parent" : 4
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 98,
+				"line" : 100,
 				"parent" : 0
 			},
 			{
@@ -86,13 +86,13 @@
 			{
 				"command" : 7,
 				"file" : 1,
-				"line" : 75,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 8,
 				"file" : 0,
-				"line" : 200,
+				"line" : 198,
 				"parent" : 2
 			}
 		]
@@ -132,10 +132,12 @@
 				},
 				{
 					"backtrace" : 10,
+					"isSystem" : true,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googlemock/include"
 				},
 				{
 					"backtrace" : 10,
+					"isSystem" : true,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googlemock"
 				},
 				{
@@ -168,10 +170,14 @@
 	[
 		{
 			"backtrace" : 6,
+			"id" : "gmock::@0f7bb11d64f3678238c7"
+		},
+		{
+			"backtrace" : 6,
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
-	"id" : "gmock::@0f7bb11d64f3678238c7",
+	"id" : "gmock_main::@0f7bb11d64f3678238c7",
 	"install" : 
 	{
 		"destinations" : 
@@ -186,8 +192,8 @@
 			"path" : "/usr/local"
 		}
 	},
-	"name" : "gmock",
-	"nameOnDisk" : "libgmock.a",
+	"name" : "gmock_main",
+	"nameOnDisk" : "libgmock_main.a",
 	"paths" : 
 	{
 		"build" : "_deps/googletest-build/googlemock",
@@ -208,7 +214,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+			"path" : "build/_deps/googletest-src/googlemock/src/gmock_main.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

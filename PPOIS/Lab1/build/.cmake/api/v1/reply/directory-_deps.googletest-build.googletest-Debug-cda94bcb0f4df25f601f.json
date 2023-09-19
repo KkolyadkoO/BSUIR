@@ -19,20 +19,32 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 102,
+				"line" : 97,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 108,
+				"line" : 104,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 166,
+				"line" : 158,
 				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 299,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 303,
+				"parent" : 3
 			},
 			{
 				"command" : 0,
@@ -43,19 +55,7 @@
 			{
 				"command" : 0,
 				"file" : 1,
-				"line" : 330,
-				"parent" : 3
-			},
-			{
-				"command" : 0,
-				"file" : 1,
-				"line" : 352,
-				"parent" : 3
-			},
-			{
-				"command" : 0,
-				"file" : 1,
-				"line" : 352,
+				"line" : 327,
 				"parent" : 3
 			}
 		]
@@ -64,7 +64,7 @@
 	[
 		{
 			"backtrace" : 1,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib/cmake/GTest",
 			"exportName" : "GTestTargets",
 			"exportTargets" : 
@@ -94,7 +94,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib/cmake/GTest",
 			"paths" : 
 			[
@@ -105,7 +105,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "include",
 			"paths" : 
 			[
@@ -118,7 +118,7 @@
 		},
 		{
 			"backtrace" : 5,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -130,7 +130,7 @@
 		},
 		{
 			"backtrace" : 5,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -142,7 +142,7 @@
 		},
 		{
 			"backtrace" : 6,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib/pkgconfig",
 			"paths" : 
 			[
@@ -152,7 +152,7 @@
 		},
 		{
 			"backtrace" : 7,
-			"component" : "Unspecified",
+			"component" : "gtest",
 			"destination" : "lib/pkgconfig",
 			"paths" : 
 			[

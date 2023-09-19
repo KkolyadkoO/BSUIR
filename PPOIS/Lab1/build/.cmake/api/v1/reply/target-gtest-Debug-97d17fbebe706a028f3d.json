@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/libgtest_main.a"
+			"path" : "lib/libgtest.a"
 		}
 	],
 	"backtrace" : 3,
@@ -16,7 +16,6 @@
 			"cxx_library",
 			"install",
 			"install_project",
-			"target_link_libraries",
 			"add_definitions",
 			"include_directories",
 			"target_compile_features"
@@ -35,64 +34,58 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 144,
+				"line" : 123,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 213,
+				"line" : 210,
 				"parent" : 1
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 159,
+				"line" : 165,
 				"parent" : 2
 			},
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 166,
+				"line" : 158,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 330,
+				"line" : 303,
 				"parent" : 4
-			},
-			{
-				"command" : 5,
-				"file" : 1,
-				"line" : 161,
-				"parent" : 0
 			},
 			{
 				"file" : 2
 			},
 			{
-				"command" : 6,
+				"command" : 5,
 				"file" : 2,
 				"line" : 5,
-				"parent" : 7
+				"parent" : 6
 			},
 			{
-				"command" : 7,
+				"command" : 6,
 				"file" : 2,
 				"line" : 8,
-				"parent" : 7
+				"parent" : 6
 			},
 			{
-				"command" : 7,
+				"command" : 6,
 				"file" : 1,
-				"line" : 116,
+				"line" : 113,
 				"parent" : 0
 			},
 			{
-				"command" : 8,
+				"command" : 7,
 				"file" : 0,
-				"line" : 200,
+				"line" : 198,
 				"parent" : 2
 			}
 		]
@@ -112,32 +105,30 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"define" : "SOME_IMPORTANT_DEFINITION"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/inc"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/src"
 				},
 				{
-					"backtrace" : 10,
-					"isSystem" : true,
+					"backtrace" : 9,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include"
 				},
 				{
-					"backtrace" : 10,
-					"isSystem" : true,
+					"backtrace" : 9,
 					"path" : "/Users/user/Desktop/\u0423\u041d\u0418\u041a/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest"
 				}
 			],
@@ -146,7 +137,7 @@
 			{
 				"backtraces" : 
 				[
-					11
+					10
 				],
 				"standard" : "14"
 			},
@@ -156,14 +147,7 @@
 			]
 		}
 	],
-	"dependencies" : 
-	[
-		{
-			"backtrace" : 6,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
-		}
-	],
-	"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f",
+	"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
 	"install" : 
 	{
 		"destinations" : 
@@ -178,8 +162,8 @@
 			"path" : "/usr/local"
 		}
 	},
-	"name" : "gtest_main",
-	"nameOnDisk" : "libgtest_main.a",
+	"name" : "gtest",
+	"nameOnDisk" : "libgtest.a",
 	"paths" : 
 	{
 		"build" : "_deps/googletest-build/googletest",
@@ -200,7 +184,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/googletest-src/googletest/src/gtest_main.cc",
+			"path" : "build/_deps/googletest-src/googletest/src/gtest-all.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

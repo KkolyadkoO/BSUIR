@@ -19,8 +19,20 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 120,
+				"line" : 115,
 				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 299,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 303,
+				"parent" : 1
 			},
 			{
 				"command" : 0,
@@ -31,19 +43,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 330,
-				"parent" : 1
-			},
-			{
-				"command" : 0,
-				"file" : 0,
-				"line" : 352,
-				"parent" : 1
-			},
-			{
-				"command" : 0,
-				"file" : 0,
-				"line" : 352,
+				"line" : 327,
 				"parent" : 1
 			}
 		]
@@ -52,7 +52,7 @@
 	[
 		{
 			"backtrace" : 2,
-			"component" : "Unspecified",
+			"component" : "gmock",
 			"destination" : "include",
 			"paths" : 
 			[
@@ -65,7 +65,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"component" : "Unspecified",
+			"component" : "gmock",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -77,7 +77,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"component" : "Unspecified",
+			"component" : "gmock",
 			"destination" : "lib",
 			"paths" : 
 			[
@@ -89,7 +89,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"component" : "Unspecified",
+			"component" : "gmock",
 			"destination" : "lib/pkgconfig",
 			"paths" : 
 			[
@@ -99,7 +99,7 @@
 		},
 		{
 			"backtrace" : 5,
-			"component" : "Unspecified",
+			"component" : "gmock",
 			"destination" : "lib/pkgconfig",
 			"paths" : 
 			[
