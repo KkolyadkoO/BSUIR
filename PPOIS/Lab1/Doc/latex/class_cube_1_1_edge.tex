@@ -1,0 +1,77 @@
+\doxysection{Класс Cube\+::Edge}
+\hypertarget{class_cube_1_1_edge}{}\label{class_cube_1_1_edge}\index{Cube::Edge@{Cube::Edge}}
+
+
+Класс грань  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cube_1_1_edge_a7a740d28ba5bb0c533fdcc4ee260a1e5}{rotate\+\_\+edge}} ()
+\begin{DoxyCompactList}\small\item\em Поворот стороны кубика по часавой стрелке \end{DoxyCompactList}\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{class_cube_1_1_edge_a2429e72f7e17c605da42ee0914d436e3}{rotation\+\_\+of\+\_\+adjacent\+\_\+edge}} (std\+::vector$<$ char $>$ to\+\_\+rotate, int cell\+\_\+1, int cell\+\_\+2, int cell\+\_\+3)
+\begin{DoxyCompactList}\small\item\em Замена соседних раней \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{class_cube_1_1_edge_ae03a9ad4284405a8586246f065f624b0}{cells}}
+\begin{DoxyCompactList}\small\item\em Вектор клеток на грани \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс грань 
+
+\doxysubsection{Методы}
+\Hypertarget{class_cube_1_1_edge_a7a740d28ba5bb0c533fdcc4ee260a1e5}\label{class_cube_1_1_edge_a7a740d28ba5bb0c533fdcc4ee260a1e5} 
+\index{Cube::Edge@{Cube::Edge}!rotate\_edge@{rotate\_edge}}
+\index{rotate\_edge@{rotate\_edge}!Cube::Edge@{Cube::Edge}}
+\doxysubsubsection{\texorpdfstring{rotate\_edge()}{rotate\_edge()}}
+{\footnotesize\ttfamily void Cube\+::\+Edge\+::rotate\+\_\+edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Поворот стороны кубика по часавой стрелке 
+
+\Hypertarget{class_cube_1_1_edge_a2429e72f7e17c605da42ee0914d436e3}\label{class_cube_1_1_edge_a2429e72f7e17c605da42ee0914d436e3} 
+\index{Cube::Edge@{Cube::Edge}!rotation\_of\_adjacent\_edge@{rotation\_of\_adjacent\_edge}}
+\index{rotation\_of\_adjacent\_edge@{rotation\_of\_adjacent\_edge}!Cube::Edge@{Cube::Edge}}
+\doxysubsubsection{\texorpdfstring{rotation\_of\_adjacent\_edge()}{rotation\_of\_adjacent\_edge()}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ Cube\+::\+Edge\+::rotation\+\_\+of\+\_\+adjacent\+\_\+edge (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$}]{to\+\_\+rotate,  }\item[{int}]{cell\+\_\+1,  }\item[{int}]{cell\+\_\+2,  }\item[{int}]{cell\+\_\+3 }\end{DoxyParamCaption})}
+
+
+
+Замена соседних раней 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em to\+\_\+rotate} & три клетки с прошлой грани \\
+\hline
+{\em cell\+\_\+1} & номер клетки 1 \\
+\hline
+{\em cell\+\_\+2} & номер клетки 2 \\
+\hline
+{\em cell\+\_\+3} & номер клетки 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+std\+::vector$<$char$>$ вектор содержащий три клетки которые заменили 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_cube_1_1_edge_ae03a9ad4284405a8586246f065f624b0}\label{class_cube_1_1_edge_ae03a9ad4284405a8586246f065f624b0} 
+\index{Cube::Edge@{Cube::Edge}!cells@{cells}}
+\index{cells@{cells}!Cube::Edge@{Cube::Edge}}
+\doxysubsubsection{\texorpdfstring{cells}{cells}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ Cube\+::\+Edge\+::cells}
+
+
+
+Вектор клеток на грани 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/user/\+Desktop/projects/laba1/inc/\mbox{\hyperlink{cube_8h}{cube.\+h}}\end{DoxyCompactItemize}

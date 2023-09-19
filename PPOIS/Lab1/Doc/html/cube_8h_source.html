@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cube_Lab: Исходный файл /Users/user/Desktop/projects/laba1/inc/cube.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cube_Lab
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">cube.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cube_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;time.h&gt;</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_cube.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cube.html">Cube</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_cube_1_1_edge.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_cube_1_1_edge.html">Edge</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_cube_1_1_edge.html#ae03a9ad4284405a8586246f065f624b0">   25</a></span>            std::vector&lt;char&gt; <a class="code hl_variable" href="class_cube_1_1_edge.html#ae03a9ad4284405a8586246f065f624b0">cells</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_cube_1_1_edge.html#a7a740d28ba5bb0c533fdcc4ee260a1e5">   30</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube_1_1_edge.html#a7a740d28ba5bb0c533fdcc4ee260a1e5">rotate_edge</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_cube_1_1_edge.html#a2429e72f7e17c605da42ee0914d436e3">   40</a></span>            std::vector&lt;char&gt; <a class="code hl_function" href="class_cube_1_1_edge.html#a2429e72f7e17c605da42ee0914d436e3">rotation_of_adjacent_edge</a>(std::vector&lt;char&gt; to_rotate, <span class="keywordtype">int</span> cell_1,<span class="keywordtype">int</span> cell_2, <span class="keywordtype">int</span> cell_3);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        };</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_cube.html#a03ff178807a76190530d6263294056f0">   47</a></span>    std::vector&lt;Edge&gt; <a class="code hl_variable" href="class_cube.html#a03ff178807a76190530d6263294056f0">cube</a>;<span class="comment">//0-y 1-r 2-b 3-o 4-g 5-w</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_cube.html#a29a44d7f99582dd8081b754c366c30ab">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a29a44d7f99582dd8081b754c366c30ab">write_cube</a>(std::string str);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_cube.html#a7bfe7671a7c8cfcf2c47d6f66bb1e61b">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a7bfe7671a7c8cfcf2c47d6f66bb1e61b">generation_cube</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_cube.html#a06f3d86fb63e3aad08623610aa3c17b4">   65</a></span>    <a class="code hl_function" href="class_cube.html#a06f3d86fb63e3aad08623610aa3c17b4">Cube</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_cube.html#aad479fdfac2a20eadadad3b3f00c5e6b">   71</a></span>    <a class="code hl_function" href="class_cube.html#aad479fdfac2a20eadadad3b3f00c5e6b">Cube</a>(std::string cube_inp);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_cube.html#a0ce4cf4ca82d736cdc26299cf1bb0020">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a0ce4cf4ca82d736cdc26299cf1bb0020">print_cube</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_cube.html#a16daf1c735f8ca8b7aef48d228927362">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a16daf1c735f8ca8b7aef48d228927362">rotate_the_top_edge_clockwise</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_cube.html#abd8a24a233a8cdc51ae231f963e05697">   86</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#abd8a24a233a8cdc51ae231f963e05697">rotate_the_left_edge_clockwise</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_cube.html#a0d3c2aa89255a6ce58187d5d5d405e73">   91</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a0d3c2aa89255a6ce58187d5d5d405e73">rotate_the_front_edge_clockwise</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_cube.html#a608e3aaae86ec48059ab1399108e4223">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a608e3aaae86ec48059ab1399108e4223">rotate_the_right_edge_clockwise</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_cube.html#a7020c11b8f14be7fb49275d5bb4838ab">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a7020c11b8f14be7fb49275d5bb4838ab">rotate_the_back_edge_clockwise</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_cube.html#a04894877ee3d09f9454ae3feea8b82d3">  106</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a04894877ee3d09f9454ae3feea8b82d3">rotate_the_bottom_edge_clockwise</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_cube.html#a1f3c3fc5410dfcf5543f0d14edf55bc7">  114</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cube.html#a1f3c3fc5410dfcf5543f0d14edf55bc7">operator ==</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_cube.html">Cube</a> &amp;c);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_cube.html#ae6b0af8d87beb63beb6a4e29a0f4f97d">  119</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#ae6b0af8d87beb63beb6a4e29a0f4f97d">rotate_the_top_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_cube.html#adcf84b3bf22de876496eab9299c41688">  124</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#adcf84b3bf22de876496eab9299c41688">rotate_the_left_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_cube.html#af3d9fac5867ec1e3d5f07a85e6bce7b1">  129</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#af3d9fac5867ec1e3d5f07a85e6bce7b1">rotate_the_front_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_cube.html#ae2411df96fa39ec2aec7449d93a39340">  134</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#ae2411df96fa39ec2aec7449d93a39340">rotate_the_right_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_cube.html#a90535d407e4fb01d3095023d7dfceed9">  139</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a90535d407e4fb01d3095023d7dfceed9">rotate_the_back_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_cube.html#a83dd9f03cdd3070e4d75fd1f9dc57be4">  144</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cube.html#a83dd9f03cdd3070e4d75fd1f9dc57be4">rotate_the_bottom_edge_counter_clockwise</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_cube.html#aaf3a6f230528d1231749a373b9535473">  151</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cube.html#aaf3a6f230528d1231749a373b9535473">win_check</a>();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>};</div>
+</div>
+<div class="ttc" id="aclass_cube_1_1_edge_html"><div class="ttname"><a href="class_cube_1_1_edge.html">Cube::Edge</a></div><div class="ttdoc">Класс грань</div><div class="ttdef"><b>Definition</b> cube.h:19</div></div>
+<div class="ttc" id="aclass_cube_1_1_edge_html_a2429e72f7e17c605da42ee0914d436e3"><div class="ttname"><a href="class_cube_1_1_edge.html#a2429e72f7e17c605da42ee0914d436e3">Cube::Edge::rotation_of_adjacent_edge</a></div><div class="ttdeci">std::vector&lt; char &gt; rotation_of_adjacent_edge(std::vector&lt; char &gt; to_rotate, int cell_1, int cell_2, int cell_3)</div><div class="ttdoc">Замена соседних раней</div></div>
+<div class="ttc" id="aclass_cube_1_1_edge_html_a7a740d28ba5bb0c533fdcc4ee260a1e5"><div class="ttname"><a href="class_cube_1_1_edge.html#a7a740d28ba5bb0c533fdcc4ee260a1e5">Cube::Edge::rotate_edge</a></div><div class="ttdeci">void rotate_edge()</div><div class="ttdoc">Поворот стороны кубика по часавой стрелке</div></div>
+<div class="ttc" id="aclass_cube_1_1_edge_html_ae03a9ad4284405a8586246f065f624b0"><div class="ttname"><a href="class_cube_1_1_edge.html#ae03a9ad4284405a8586246f065f624b0">Cube::Edge::cells</a></div><div class="ttdeci">std::vector&lt; char &gt; cells</div><div class="ttdoc">Вектор клеток на грани</div><div class="ttdef"><b>Definition</b> cube.h:25</div></div>
+<div class="ttc" id="aclass_cube_html"><div class="ttname"><a href="class_cube.html">Cube</a></div><div class="ttdoc">Класс кубик рубика</div><div class="ttdef"><b>Definition</b> cube.h:12</div></div>
+<div class="ttc" id="aclass_cube_html_a03ff178807a76190530d6263294056f0"><div class="ttname"><a href="class_cube.html#a03ff178807a76190530d6263294056f0">Cube::cube</a></div><div class="ttdeci">std::vector&lt; Edge &gt; cube</div><div class="ttdoc">Вектор в котором хранятся грани кубика</div><div class="ttdef"><b>Definition</b> cube.h:47</div></div>
+<div class="ttc" id="aclass_cube_html_a04894877ee3d09f9454ae3feea8b82d3"><div class="ttname"><a href="class_cube.html#a04894877ee3d09f9454ae3feea8b82d3">Cube::rotate_the_bottom_edge_clockwise</a></div><div class="ttdeci">void rotate_the_bottom_edge_clockwise()</div><div class="ttdoc">Поворот нижней грани по часавой</div></div>
+<div class="ttc" id="aclass_cube_html_a06f3d86fb63e3aad08623610aa3c17b4"><div class="ttname"><a href="class_cube.html#a06f3d86fb63e3aad08623610aa3c17b4">Cube::Cube</a></div><div class="ttdeci">Cube()</div><div class="ttdoc">Конструктор кубика рубика</div></div>
+<div class="ttc" id="aclass_cube_html_a0ce4cf4ca82d736cdc26299cf1bb0020"><div class="ttname"><a href="class_cube.html#a0ce4cf4ca82d736cdc26299cf1bb0020">Cube::print_cube</a></div><div class="ttdeci">void print_cube()</div><div class="ttdoc">Выводит кубик</div></div>
+<div class="ttc" id="aclass_cube_html_a0d3c2aa89255a6ce58187d5d5d405e73"><div class="ttname"><a href="class_cube.html#a0d3c2aa89255a6ce58187d5d5d405e73">Cube::rotate_the_front_edge_clockwise</a></div><div class="ttdeci">void rotate_the_front_edge_clockwise()</div><div class="ttdoc">Поворот передней грани по часавой</div></div>
+<div class="ttc" id="aclass_cube_html_a16daf1c735f8ca8b7aef48d228927362"><div class="ttname"><a href="class_cube.html#a16daf1c735f8ca8b7aef48d228927362">Cube::rotate_the_top_edge_clockwise</a></div><div class="ttdeci">void rotate_the_top_edge_clockwise()</div><div class="ttdoc">Поворот верхей грани по часовой</div></div>
+<div class="ttc" id="aclass_cube_html_a1f3c3fc5410dfcf5543f0d14edf55bc7"><div class="ttname"><a href="class_cube.html#a1f3c3fc5410dfcf5543f0d14edf55bc7">Cube::operator==</a></div><div class="ttdeci">bool operator==(const Cube &amp;c)</div><div class="ttdoc">Оператор сравнения</div></div>
+<div class="ttc" id="aclass_cube_html_a29a44d7f99582dd8081b754c366c30ab"><div class="ttname"><a href="class_cube.html#a29a44d7f99582dd8081b754c366c30ab">Cube::write_cube</a></div><div class="ttdeci">void write_cube(std::string str)</div><div class="ttdoc">Запись кубика</div></div>
+<div class="ttc" id="aclass_cube_html_a608e3aaae86ec48059ab1399108e4223"><div class="ttname"><a href="class_cube.html#a608e3aaae86ec48059ab1399108e4223">Cube::rotate_the_right_edge_clockwise</a></div><div class="ttdeci">void rotate_the_right_edge_clockwise()</div><div class="ttdoc">Поворот правой грани по часавой</div></div>
+<div class="ttc" id="aclass_cube_html_a7020c11b8f14be7fb49275d5bb4838ab"><div class="ttname"><a href="class_cube.html#a7020c11b8f14be7fb49275d5bb4838ab">Cube::rotate_the_back_edge_clockwise</a></div><div class="ttdeci">void rotate_the_back_edge_clockwise()</div><div class="ttdoc">Поворот задней грани по часавой</div></div>
+<div class="ttc" id="aclass_cube_html_a7bfe7671a7c8cfcf2c47d6f66bb1e61b"><div class="ttname"><a href="class_cube.html#a7bfe7671a7c8cfcf2c47d6f66bb1e61b">Cube::generation_cube</a></div><div class="ttdeci">void generation_cube()</div><div class="ttdoc">рандомит кубик</div></div>
+<div class="ttc" id="aclass_cube_html_a83dd9f03cdd3070e4d75fd1f9dc57be4"><div class="ttname"><a href="class_cube.html#a83dd9f03cdd3070e4d75fd1f9dc57be4">Cube::rotate_the_bottom_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_bottom_edge_counter_clockwise()</div><div class="ttdoc">поворот нижней грани против часавой</div></div>
+<div class="ttc" id="aclass_cube_html_a90535d407e4fb01d3095023d7dfceed9"><div class="ttname"><a href="class_cube.html#a90535d407e4fb01d3095023d7dfceed9">Cube::rotate_the_back_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_back_edge_counter_clockwise()</div><div class="ttdoc">поворот задней грани против часавой</div></div>
+<div class="ttc" id="aclass_cube_html_aad479fdfac2a20eadadad3b3f00c5e6b"><div class="ttname"><a href="class_cube.html#aad479fdfac2a20eadadad3b3f00c5e6b">Cube::Cube</a></div><div class="ttdeci">Cube(std::string cube_inp)</div><div class="ttdoc">Конструктор кубика рубика</div></div>
+<div class="ttc" id="aclass_cube_html_aaf3a6f230528d1231749a373b9535473"><div class="ttname"><a href="class_cube.html#aaf3a6f230528d1231749a373b9535473">Cube::win_check</a></div><div class="ttdeci">bool win_check()</div><div class="ttdoc">Проверка собран ли куб</div></div>
+<div class="ttc" id="aclass_cube_html_abd8a24a233a8cdc51ae231f963e05697"><div class="ttname"><a href="class_cube.html#abd8a24a233a8cdc51ae231f963e05697">Cube::rotate_the_left_edge_clockwise</a></div><div class="ttdeci">void rotate_the_left_edge_clockwise()</div><div class="ttdoc">Поворот левой грани по часовой</div></div>
+<div class="ttc" id="aclass_cube_html_adcf84b3bf22de876496eab9299c41688"><div class="ttname"><a href="class_cube.html#adcf84b3bf22de876496eab9299c41688">Cube::rotate_the_left_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_left_edge_counter_clockwise()</div><div class="ttdoc">поворот левой грани против часавой</div></div>
+<div class="ttc" id="aclass_cube_html_ae2411df96fa39ec2aec7449d93a39340"><div class="ttname"><a href="class_cube.html#ae2411df96fa39ec2aec7449d93a39340">Cube::rotate_the_right_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_right_edge_counter_clockwise()</div><div class="ttdoc">поворот правой грани против часавой</div></div>
+<div class="ttc" id="aclass_cube_html_ae6b0af8d87beb63beb6a4e29a0f4f97d"><div class="ttname"><a href="class_cube.html#ae6b0af8d87beb63beb6a4e29a0f4f97d">Cube::rotate_the_top_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_top_edge_counter_clockwise()</div><div class="ttdoc">поворот верхней грани против часавой</div></div>
+<div class="ttc" id="aclass_cube_html_af3d9fac5867ec1e3d5f07a85e6bce7b1"><div class="ttname"><a href="class_cube.html#af3d9fac5867ec1e3d5f07a85e6bce7b1">Cube::rotate_the_front_edge_counter_clockwise</a></div><div class="ttdeci">void rotate_the_front_edge_counter_clockwise()</div><div class="ttdoc">поворот передней грани против часавой</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
