@@ -1,0 +1,41 @@
+bakery_set
+      <-sc_node_class;
+      ->concept_bun;;
+
+concept_bun 
+      => nrel_main_idtf:
+      [булочка]
+      (* <- lang_rus;;*);
+      [bun]
+      (* <- lang_en;;*);;
+
+concept_bun <= nrel_sc_text_translation:...
+      (*
+            <- definition;;
+            -> [Булочка - булочное изделие, выпечка небольшого размер; может быть с начинкой, добавками или без них]
+            (* <- lang_ru;;*);;
+      *);;
+
+concept_bun => nrel_compound:...
+  (*
+      <- sc_node_tuple;;
+      -> concept_dough;;
+      -> concept_filling;;
+  *);;
+
+concept_bun => nrel_major_type_of_filling:...
+  (*
+      <- sc_node_tuple;;
+      -> cherry filling;;
+      -> apple filling;;
+  *);;
+
+ingredients_set
+      <- sc_node_class;
+      -> cherry filling;
+      -> apple filling;;
+
+concept_bun => nrel_country_of_original: USA;;
+country_set
+      <- sc_node_class;
+      -> USA;;
