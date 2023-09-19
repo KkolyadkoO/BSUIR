@@ -16,13 +16,13 @@ file(GLOB_RECURSE SRC_FILES
 
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
     option(SERIALIZATION_TESTS "build tests (or on)" ON)
-
     if(SERIALIZATION_TESTS)
             add_library(tests ${SRC_FILES})
             enable_testing()
             add_subdirectory(test)
     endif()
-endif()        
+endif()  
+     
 add_executable(${PROJECT_NAME}
     ${SRC_FILES}
     ${RELATED_FILES}

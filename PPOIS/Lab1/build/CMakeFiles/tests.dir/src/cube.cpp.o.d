@@ -1,6 +1,6 @@
 CMakeFiles/tests.dir/src/cube.cpp.o: \
-  /Users/user/Desktop/projects/laba1/src/cube.cpp \
-  /Users/user/Desktop/projects/laba1/src/../inc/cube.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/../inc/cube.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

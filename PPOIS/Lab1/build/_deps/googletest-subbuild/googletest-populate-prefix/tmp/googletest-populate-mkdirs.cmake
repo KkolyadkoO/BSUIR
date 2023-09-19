@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-src"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-build"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
-  "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-build"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/user/Desktop/projects/laba1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

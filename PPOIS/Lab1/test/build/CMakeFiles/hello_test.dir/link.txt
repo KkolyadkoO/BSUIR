@@ -1,1 +1,0 @@
-/usr/bin/clang++ -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hello_test.dir/test.cpp.o CMakeFiles/hello_test.dir/cube.cpp.o -o hello_test  lib/libgtest_main.a lib/libgtest.a 

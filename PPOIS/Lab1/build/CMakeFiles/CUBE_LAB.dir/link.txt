@@ -1,1 +1,1 @@
-/usr/bin/clang++  -std=c++11 -Wall -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -o CUBE_LAB 
+/usr/bin/clang++  -std=c++11 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -o CUBE_LAB 

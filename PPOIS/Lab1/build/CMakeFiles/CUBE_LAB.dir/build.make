@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.27.4/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/Desktop/projects/laba1
+CMAKE_SOURCE_DIR = /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/Desktop/projects/laba1/build
+CMAKE_BINARY_DIR = /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CUBE_LAB.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/CUBE_LAB.dir/progress.make
 include CMakeFiles/CUBE_LAB.dir/flags.make
 
 CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o: CMakeFiles/CUBE_LAB.dir/flags.make
-CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o: /Users/user/Desktop/projects/laba1/src/cube.cpp
+CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o: /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp
 CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o: CMakeFiles/CUBE_LAB.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/user/Desktop/projects/laba1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o -MF CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o.d -o CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o -c /Users/user/Desktop/projects/laba1/src/cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o -MF CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o.d -o CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o -c /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp
 
 CMakeFiles/CUBE_LAB.dir/src/cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CUBE_LAB.dir/src/cube.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/Desktop/projects/laba1/src/cube.cpp > CMakeFiles/CUBE_LAB.dir/src/cube.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp > CMakeFiles/CUBE_LAB.dir/src/cube.cpp.i
 
 CMakeFiles/CUBE_LAB.dir/src/cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CUBE_LAB.dir/src/cube.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/Desktop/projects/laba1/src/cube.cpp -o CMakeFiles/CUBE_LAB.dir/src/cube.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp -o CMakeFiles/CUBE_LAB.dir/src/cube.cpp.s
 
 CMakeFiles/CUBE_LAB.dir/src/main.cpp.o: CMakeFiles/CUBE_LAB.dir/flags.make
-CMakeFiles/CUBE_LAB.dir/src/main.cpp.o: /Users/user/Desktop/projects/laba1/src/main.cpp
+CMakeFiles/CUBE_LAB.dir/src/main.cpp.o: /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/main.cpp
 CMakeFiles/CUBE_LAB.dir/src/main.cpp.o: CMakeFiles/CUBE_LAB.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/user/Desktop/projects/laba1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CUBE_LAB.dir/src/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -MF CMakeFiles/CUBE_LAB.dir/src/main.cpp.o.d -o CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -c /Users/user/Desktop/projects/laba1/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CUBE_LAB.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -MF CMakeFiles/CUBE_LAB.dir/src/main.cpp.o.d -o CMakeFiles/CUBE_LAB.dir/src/main.cpp.o -c /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/main.cpp
 
 CMakeFiles/CUBE_LAB.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CUBE_LAB.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/Desktop/projects/laba1/src/main.cpp > CMakeFiles/CUBE_LAB.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/main.cpp > CMakeFiles/CUBE_LAB.dir/src/main.cpp.i
 
 CMakeFiles/CUBE_LAB.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CUBE_LAB.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/Desktop/projects/laba1/src/main.cpp -o CMakeFiles/CUBE_LAB.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/main.cpp -o CMakeFiles/CUBE_LAB.dir/src/main.cpp.s
 
 # Object files for target CUBE_LAB
 CUBE_LAB_OBJECTS = \
@@ -109,7 +109,7 @@ CUBE_LAB: CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o
 CUBE_LAB: CMakeFiles/CUBE_LAB.dir/src/main.cpp.o
 CUBE_LAB: CMakeFiles/CUBE_LAB.dir/build.make
 CUBE_LAB: CMakeFiles/CUBE_LAB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/user/Desktop/projects/laba1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CUBE_LAB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CUBE_LAB"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CUBE_LAB.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/CUBE_LAB.dir/clean:
 .PHONY : CMakeFiles/CUBE_LAB.dir/clean
 
 CMakeFiles/CUBE_LAB.dir/depend:
-	cd /Users/user/Desktop/projects/laba1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/Desktop/projects/laba1 /Users/user/Desktop/projects/laba1 /Users/user/Desktop/projects/laba1/build /Users/user/Desktop/projects/laba1/build /Users/user/Desktop/projects/laba1/build/CMakeFiles/CUBE_LAB.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1 /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1 /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles/CUBE_LAB.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/CUBE_LAB.dir/depend
 

@@ -74,5 +74,5 @@
         "algorithm": "cpp"
     },
     "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.sourceDirectory": "/Users/user/Desktop/projects/laba1"
+    "cmake.sourceDirectory": "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1"
 }

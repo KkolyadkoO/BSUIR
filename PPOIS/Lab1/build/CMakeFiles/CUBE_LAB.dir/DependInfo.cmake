@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/user/Desktop/projects/laba1/src/cube.cpp" "CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o" "gcc" "CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o.d"
-  "/Users/user/Desktop/projects/laba1/src/main.cpp" "CMakeFiles/CUBE_LAB.dir/src/main.cpp.o" "gcc" "CMakeFiles/CUBE_LAB.dir/src/main.cpp.o.d"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/cube.cpp" "CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o" "gcc" "CMakeFiles/CUBE_LAB.dir/src/cube.cpp.o.d"
+  "/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src/main.cpp" "CMakeFiles/CUBE_LAB.dir/src/main.cpp.o" "gcc" "CMakeFiles/CUBE_LAB.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

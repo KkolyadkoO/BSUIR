@@ -1,6 +1,6 @@
 test/CMakeFiles/Cube_Test.dir/test.cpp.o: \
-  /Users/user/Desktop/projects/laba1/test/test.cpp \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/test/test.cpp \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -415,19 +415,19 @@ test/CMakeFiles/Cube_Test.dir/test.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/stat.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_filesec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityMacros.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/TargetConditionals.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_posix_vdisable.h \
@@ -442,11 +442,11 @@ test/CMakeFiles/Cube_Test.dir/test.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/any \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/optional \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/float.h \
@@ -456,19 +456,19 @@ test/CMakeFiles/Cube_Test.dir/test.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/set \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cxxabi.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__cxxabi_config.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
-  /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
-  /Users/user/Desktop/projects/laba1/test/../inc/cube.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
+  /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/test/../inc/cube.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/stack \

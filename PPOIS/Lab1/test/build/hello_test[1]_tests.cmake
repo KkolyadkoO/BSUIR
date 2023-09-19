@@ -1,7 +1,0 @@
-add_test([=[RotateLeftSideTest.Left]=]  /Users/user/Desktop/projects/laba1/test/build/hello_test [==[--gtest_filter=RotateLeftSideTest.Left]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[RotateLeftSideTest.Left]=]  PROPERTIES WORKING_DIRECTORY /Users/user/Desktop/projects/laba1/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[RotateRightSideTest.Right]=]  /Users/user/Desktop/projects/laba1/test/build/hello_test [==[--gtest_filter=RotateRightSideTest.Right]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[RotateRightSideTest.Right]=]  PROPERTIES WORKING_DIRECTORY /Users/user/Desktop/projects/laba1/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[RotateFrontSideTest.Front]=]  /Users/user/Desktop/projects/laba1/test/build/hello_test [==[--gtest_filter=RotateFrontSideTest.Front]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[RotateFrontSideTest.Front]=]  PROPERTIES WORKING_DIRECTORY /Users/user/Desktop/projects/laba1/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  hello_test_TESTS RotateLeftSideTest.Left RotateRightSideTest.Right RotateFrontSideTest.Front)

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "inc/cube.h"
+#include "../inc/cube.h"
 #include <vector>
 using namespace std;
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DSOME_IMPORTANT_DEFINITION
 
-CXX_INCLUDES = -I/Users/user/Desktop/projects/laba1 -I/Users/user/Desktop/projects/laba1/inc -I/Users/user/Desktop/projects/laba1/src
+CXX_INCLUDES = -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1 -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/inc -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src
 
-CXX_FLAGS =  -std=c++11 -Wall -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6
+CXX_FLAGS =  -std=c++11 -Wall -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -DSOME_IMPORTANT_DEFINITION
 
-CXX_INCLUDES = -I/Users/user/Desktop/projects/laba1 -I/Users/user/Desktop/projects/laba1/inc -I/Users/user/Desktop/projects/laba1/src -I/Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googlemock/include -I/Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googlemock -isystem /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest/include -isystem /Users/user/Desktop/projects/laba1/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1 -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/inc -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/src -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googlemock/include -I/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googlemock -isystem /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest/include -isystem /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/_deps/googletest-src/googletest
 
-CXX_FLAGS =  -std=c++11 -Wall -O3 -DNDEBUG -std=c++14 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6  -DGTEST_HAS_PTHREAD=1  
+CXX_FLAGS =  -std=c++11 -Wall -g -std=c++14 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6  -DGTEST_HAS_PTHREAD=1  
 

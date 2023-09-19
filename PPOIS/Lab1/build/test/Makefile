@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.27.4/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/Desktop/projects/laba1
+CMAKE_SOURCE_DIR = /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/Desktop/projects/laba1/build
+CMAKE_BINARY_DIR = /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/Desktop/projects/laba1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/projects/laba1/build/CMakeFiles /Users/user/Desktop/projects/laba1/build/test//CMakeFiles/progress.marks
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/projects/laba1/build/CMakeFiles 0
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/test//CMakeFiles/progress.marks
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/Desktop/projects/laba1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/Cube_Test.dir/rule:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/Cube_Test.dir/rule
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/Cube_Test.dir/rule
 .PHONY : test/CMakeFiles/Cube_Test.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ Cube_Test: test/CMakeFiles/Cube_Test.dir/rule
 
 # fast build rule for target.
 Cube_Test/fast:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/build
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/build
 .PHONY : Cube_Test/fast
 
 __/src/cube.o: __/src/cube.cpp.o
@@ -190,7 +190,7 @@ __/src/cube.o: __/src/cube.cpp.o
 
 # target to build an object file
 __/src/cube.cpp.o:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.o
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.o
 .PHONY : __/src/cube.cpp.o
 
 __/src/cube.i: __/src/cube.cpp.i
@@ -198,7 +198,7 @@ __/src/cube.i: __/src/cube.cpp.i
 
 # target to preprocess a source file
 __/src/cube.cpp.i:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.i
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.i
 .PHONY : __/src/cube.cpp.i
 
 __/src/cube.s: __/src/cube.cpp.s
@@ -206,7 +206,7 @@ __/src/cube.s: __/src/cube.cpp.s
 
 # target to generate assembly for a file
 __/src/cube.cpp.s:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.s
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/__/src/cube.cpp.s
 .PHONY : __/src/cube.cpp.s
 
 test.o: test.cpp.o
@@ -214,7 +214,7 @@ test.o: test.cpp.o
 
 # target to build an object file
 test.cpp.o:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.o
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -222,7 +222,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.i
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -230,7 +230,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	cd /Users/user/Desktop/projects/laba1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.s
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Cube_Test.dir/build.make test/CMakeFiles/Cube_Test.dir/test.cpp.s
 .PHONY : test.cpp.s
 
 # Help Target
@@ -264,6 +264,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/Desktop/projects/laba1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

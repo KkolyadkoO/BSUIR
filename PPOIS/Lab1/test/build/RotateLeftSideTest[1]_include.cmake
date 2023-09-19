@@ -1,5 +1,0 @@
-if(EXISTS "/Users/user/Desktop/projects/laba1/test/build/RotateLeftSideTest[1]_tests.cmake")
-  include("/Users/user/Desktop/projects/laba1/test/build/RotateLeftSideTest[1]_tests.cmake")
-else()
-  add_test(RotateLeftSideTest_NOT_BUILT RotateLeftSideTest_NOT_BUILT)
-endif()
