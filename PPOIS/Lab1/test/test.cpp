@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <sstream>
 #include "../inc/cube.h"
 
 TEST(Cube_Test, RotateLeftSideTest) {
@@ -73,7 +74,44 @@ TEST(Cube_Test, CounterRotateTopSideTest) {
   EXPECT_TRUE(cube_t==cube_test_top);
 }
 
-TEST(Cube_Test, WinTest){
+TEST(Cube_Test, WinTest_Win){
   Cube cube_t("yyyyyyyyyrrrrrrrrrgggggggggooooooooobbbbbbbbbwwwwwwwww");
   EXPECT_TRUE(cube_t.win_check());
+}
+TEST(Cube_Test, WinTest_Lose){
+    Cube cube_t("yyyyyyyyryrrrrrrrrgggggggggooooooooobbbbbbbbbwwwwwwwww");
+    EXPECT_FALSE(cube_t.win_check());
+}
+
+TEST(Cube_Test, Construc_Test) {
+    // Create a stringstream to simulate user input
+    std::stringstream input_stream("y\n"); // Simulate the user entering "42" and pressing Enter
+
+    // Save the original cin buffer and replace it with the input stringstream
+    std::streambuf* original_cin = std::cin.rdbuf(input_stream.rdbuf());
+
+    // Perform the function call
+    Cube cube_t,cube_test("yyyyyyyyyrrrrrrrrrgggggggggooooooooobbbbbbbbbwwwwwwwww");
+
+    // Restore the original cin buffer
+    std::cin.rdbuf(original_cin);
+
+    // Check the result of the function
+    EXPECT_TRUE(cube_t==cube_test);
+}
+TEST(Cube_Test, Generation_Test) {
+    // Create a stringstream to simulate user input
+    std::stringstream input_stream("n\n"); // Simulate the user entering "42" and pressing Enter
+
+    // Save the original cin buffer and replace it with the input stringstream
+    std::streambuf* original_cin = std::cin.rdbuf(input_stream.rdbuf());
+
+    // Perform the function call
+    Cube cube_t,cube_test("yyyyyyyyyrrrrrrrrrbbbbbbbbbooooooooogggggggggwwwwwwwww");
+
+    // Restore the original cin buffer
+    std::cin.rdbuf(original_cin);
+
+    // Check the result of the function
+    EXPECT_FALSE(cube_t==cube_test);
 }
