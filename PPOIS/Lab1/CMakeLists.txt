@@ -13,9 +13,11 @@ include_directories(
 file(GLOB_RECURSE SRC_FILES
     ${PROJECT_SOURCE_DIR}/src/*.cpp
 )
-
+#.gcno
+#.gcda
+#.gcov
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
-    option(SERIALIZATION_TESTS "build tests (or on)" ON)
+    option(SERIALIZATION_TESTS "build tests (or on)" OFF)
     if(SERIALIZATION_TESTS)
             add_library(tests ${SRC_FILES})
             enable_testing()
