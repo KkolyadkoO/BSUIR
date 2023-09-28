@@ -51,13 +51,14 @@ class Cube
      * @param str строка с комбинацией
      */
     void write_cube(std::string str);
+    public:
     /**
      * @brief рандомит кубик
      * 
      * @details кубик получается 100% собираемым
      */
     void generation_cube();
-    public:
+    
     /**
      * @brief Конструктор кубика рубика
      * @details Необходим, если мы генерируем кубик
@@ -69,6 +70,7 @@ class Cube
      * @param cube_inp комбинация кубика
      */
     Cube(std::string cube_inp);
+    void load_cube(std::string filename);
     /**
      * @brief Выводит кубик
      * 

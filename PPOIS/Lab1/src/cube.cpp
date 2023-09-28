@@ -2,13 +2,11 @@
 
 Cube::Cube()
 {
-    char load_or_generate;
-    std::cout << "load cube (y/n)"<<std::endl;
-    std::cin >> load_or_generate;
-    if(load_or_generate == 'y')
-    {
-        std::string buff;
-        std::ifstream input("input.txt");
+}
+void Cube::load_cube(std::string filename)
+{
+    std::string buff;
+        std::ifstream input(filename);
         if (!input.is_open()) 
             std::cout << "Файл не может быть открыт!\n"; 
         else
@@ -16,14 +14,9 @@ Cube::Cube()
             input >> buff; // считали расстановку кубика из файла
             input.close(); // закрываем файл
         }
+        
         write_cube(buff);
-    }
-    else
-    {
-        write_cube("yyyyyyyyyrrrrrrrrrbbbbbbbbbooooooooogggggggggwwwwwwwww");
-        generation_cube();
-    }
-    
+
 }
 Cube::Cube(std::string cube_inp)
 {
@@ -31,6 +24,7 @@ Cube::Cube(std::string cube_inp)
 }
 void Cube::generation_cube()
 {
+    write_cube("yyyyyyyyyrrrrrrrrrbbbbbbbbbooooooooogggggggggwwwwwwwww");
     srand(time(NULL));
     for (int i = 0; i < 10; i++)
     {
