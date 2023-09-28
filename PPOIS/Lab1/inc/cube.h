@@ -62,7 +62,7 @@ class Cube
      * @brief Конструктор кубика рубика
      * @details Необходим, если мы генерируем кубик
      */
-    Cube();
+    Cube(char choice,std::string filename);
     /**
      * @brief Конструктор кубика рубика
      * @details Необходим, если мы загружаем кубик

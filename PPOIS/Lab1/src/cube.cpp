@@ -1,14 +1,11 @@
 #include "../inc/cube.h"
 
-Cube::Cube()
+Cube::Cube(char choice,std::string filename)
 {
-    char load_or_generate;
-    std::cout << "load cube (y/n)"<<std::endl;
-    std::cin >> load_or_generate;
-    if(load_or_generate == 'y')
+    if(choice == 'y')
     {
         std::string buff;
-        std::ifstream input("input.txt");
+        std::ifstream input(filename);
         if (!input.is_open()) 
             std::cout << "Файл не может быть открыт!\n"; 
         else
