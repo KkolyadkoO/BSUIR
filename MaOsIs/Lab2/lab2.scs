@@ -1,0 +1,125 @@
+section_subject_domain_of_bakery_products
+
+    => nrel_main_idtf:
+    [Раздел. Предметная область выпечки]
+    (* <- lang_ru;;*);
+    [Section. Subject domain of bakery products]
+    (* <- lang_en;;*);
+
+    <= nrel_section_decomposition:...
+    (*
+        <- sc_node_tuple;;
+        -> section_subject_domain_of_bread
+            (* 
+                <- sc_node_struct;;
+                => nrel_main_idtf: [Раздел. Предметная область хлеба] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_buns
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область булочек] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_pancakes
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область блинов] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_pies 
+            (* 
+                <-sc_node_struct;;  
+                => nrel_main_idtf: [Раздел. Предметная область пирогов] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_cakes 
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область тортов] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_donuts 
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область пончиков] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_cupcakes
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область кексов] (* <- lang_ru;;*);;
+            *);;
+    *);
+
+    -> rrel_key_sc_element: 
+        concept_dough 
+            (* => nrel_main_idtf: [Тесто] (* <- lang_ru;;*);;*);
+        concept_filling
+            (* => nrel_main_idtf: [Начинка] (* <- lang_ru;;*);;*);
+        nrel_smell
+            (* => nrel_main_idtf: [Пахнуть] (* <- lang_ru;;*);;*);
+        nrel_eat
+            (* => nrel_main_idtf: [Кушаться] (* <- lang_ru;;*);;*);
+       
+    <- non_atomic_section;;
+
+section_subject_domain_of_bakery_products
+    = [*
+        subject_domain_of_bakery_products
+
+            => nrel_main_idtf:
+            [Предметная область выпечки]
+            (* <- lang_ru;;*);
+            [Subject domain of bakery_products]
+            (* <- lang_en;;*);
+
+            <- subject_domain;
+            <- sc_node_struct;
+
+            => nrel_private_subject_domain:
+                subject_domain_of_bread 
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область хлеба] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_buns
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область булочек] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_pancakes
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область блинов] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_pies  
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область пирогов] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_cakes
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область блинов] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_donuts  
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область пончиков] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_cupcakes 
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область кексов] (* <- lang_ru;;*);;
+                    *);
+
+            <= nrel_private_subject_domain:
+                subject_domain_of_bakery_products;
+
+            -> rrel_maximum_studied_object_class:
+                concept_bakery_product
+                    (* => nrel_main_idtf: [Выпечка] (* <- lang_ru;;*);;*);
+
+            -> rrel_not_maximum_studied_object_class:
+                concept_dough;
+                concept_filling;
+
+            -> rrel_explored_relation:
+                nrel_smell;
+                nrel_eat;;
+    *];;
