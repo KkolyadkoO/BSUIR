@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {       
     PostalOffice off("address","10 am","delivery");
-    off.loadClients("clients.txt");
-    off.loadPostmans("postmans.txt");
-    off.loadPackage("letters.txt","parcels.txt");
+    off.loadDate("date.txt");
+    off.showClients();
+    off.showPostmans();
     off.sortPackage();
     return 0;
 

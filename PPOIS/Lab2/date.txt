@@ -1,0 +1,58 @@
+Client
+John Smith
+123 Main St
+555-1234
+john.smith@email.com
+1
+12345
+Client
+Kolyadko
+st. Golubeva
+375xxxxxxxx
+example@gmail.com
+2
+220116
+Postman
+John Smith
+123 Main St
+555-1234
+john.smith@email.com
+1000
+sorter
+Postman
+Kolyadko
+st. Golubeva
+375xxxxxxxx
+example@gmail.com
+2000
+deliveryman
+Parcel
+1
+2
+100
+USA
+100
+50
+150
+Parcel
+2
+1
+150
+British
+50
+100
+200
+Letter
+1
+2
+12
+China
+Hello world
+END TEXT
+Letter
+2
+1
+10
+Belarus
+Hello China
+END TEXT

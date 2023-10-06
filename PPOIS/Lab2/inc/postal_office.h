@@ -3,7 +3,10 @@
 #include <fstream>
 #include <vector>
 
-
+/**
+ * @brief Класс содержащий адрес посылки
+ * 
+ */
 class DeliveryAddress{
 private:
     std::string postcode;
@@ -101,6 +104,7 @@ public:
     Deliveryman(const std::string& name_,const std::string& address_,const std::string& phoneNumber_,const std::string& mail_, int salary_);
     void addLetter(Letter letter);
     void addParcel(Parcel parcel);
+    int getPackageInStock();
 };
 
 class PostalOffice{
@@ -120,10 +124,15 @@ public:
     std::string getAddress() const;
     std::string getOpeningHours() const;
     std::string getService() const;
-    void loadClients(std::string filename);
+    void loadClients(std::ifstream& fileDate);
     void showClients();
-    void loadPostmans(std::string filename);
+    void loadPostmans(std::ifstream& fileDate);
     void showPostmans();
-    void loadPackage(std::string letterFilename,std::string parcelFilename);
+    void loadLetter(std::ifstream& fileDate);
+    void loadParcel(std::ifstream& fileDate);
     void sortPackage();
+    void loadDate(std::string filename);
+    int getNumberOfClients();
+    int getNumberOfPostmans();
+    int getPackageInStock();
 };
