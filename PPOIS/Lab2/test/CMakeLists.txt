@@ -17,14 +17,14 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-  Cube_Test
+  POST_Test
   test.cpp
   ../src/postal_office.cpp
 )
 target_link_libraries(
-  Cube_Test
+  POST_Test
   GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(Cube_Test)
+gtest_discover_tests(POST_Test)

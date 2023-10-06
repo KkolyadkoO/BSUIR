@@ -1,0 +1,12 @@
+John Smith
+123 Main St
+555-1234
+john.smith@email.com
+1000
+sorter
+Kolyadko
+st. Golubeva
+375xxxxxxxx
+example@gmail.com
+2000
+deliveryman

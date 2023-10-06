@@ -14,7 +14,7 @@ file(GLOB_RECURSE SRC_FILES
     ${PROJECT_SOURCE_DIR}/src/*.cpp
 )
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
-    option(SERIALIZATION_TESTS "build tests (or on)" OFF)
+    option(SERIALIZATION_TESTS "build tests (or on)" ON)
     if(SERIALIZATION_TESTS)
             add_library(tests ${SRC_FILES})
             enable_testing()

@@ -159,6 +159,33 @@ void PostalOffice::loadPackage(std::string letterFilename,std::string parcelFile
         std::cout << "Unable to open file." << std::endl;
     }
 }
+void PostalOffice::sortPackage(){
+    if(sorters.size()==0){
+    std::cout << "There are no srters at the post office"; 
+    return;
+    }
+    sorters[sorters.size()-1].sortPackage(letters,parcels,address);
+    for (size_t i = 0; i < letters.size(); i++)
+    {
+        if(letters[i].getOnPostOffice())
+        {
+            for (size_t j = 0; j < deliverymans.size(); j++)
+            {
+                deliverymans[j].addLetter(letters[i]);
+            }
+        }
+    }
+    for (size_t i = 0; i < parcels.size(); i++)
+    {
+        if(parcels[i].getOnPostOffice())
+        {
+            for (size_t j = 0; j < deliverymans.size(); j++)
+            {
+                deliverymans[j].addParcel(parcels[i]);
+            }
+        }
+    }
+}
 
 
 // Person ---------------------------------------------------
@@ -228,6 +255,10 @@ void Package::setLocation(const std::string& location_){
 void Package::setOnPostOffice(bool value){
     onPostOffice = value;
 }
+bool Package::getOnPostOffice(){
+    return onPostOffice;
+}
+
 
 // Letter ---------------------------------------------------
 Letter::Letter(Customer sender_,Customer recipient_,double weight_,const std::string& location_,const std::string& letterText_)
@@ -269,3 +300,9 @@ void Sorter::sortPackage(std::vector<Letter>& letters,std::vector<Parcel>& parce
 // Deliveryman ---------------------------------------------
 Deliveryman::Deliveryman(const std::string& name_,const std::string& address_,const std::string& phoneNumber_,const std::string& mail_, int salary_)
 :PostMan(name_,address_,phoneNumber_,mail_,salary_){}
+void Deliveryman::addLetter(Letter letter){
+    lettersInStock.push_back(letter);
+}
+void Deliveryman::addParcel(Parcel parcel){
+    parcelInStock.push_back(parcel);
+}

@@ -1,0 +1,10 @@
+1
+2
+12
+China
+Hello world
+2
+1
+10
+Belarus
+Hello China

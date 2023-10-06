@@ -9,7 +9,7 @@ int main()
     off.loadClients("clients.txt");
     off.loadPostmans("postmans.txt");
     off.loadPackage("letters.txt","parcels.txt");
-    off.showPostmans();
+    off.sortPackage();
     return 0;
 
 }

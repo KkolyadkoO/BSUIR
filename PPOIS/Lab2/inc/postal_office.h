@@ -69,6 +69,7 @@ public:
     std::string getLocation();
     void setLocation(const std::string& location_);
     void setOnPostOffice(bool value);
+    bool getOnPostOffice();
 };
 
 class Letter : public Package{
@@ -95,9 +96,11 @@ public:
 class Deliveryman : public PostMan{
 private:
     std::vector<Letter> lettersInStock;
+    std::vector<Parcel> parcelInStock;
 public:
     Deliveryman(const std::string& name_,const std::string& address_,const std::string& phoneNumber_,const std::string& mail_, int salary_);
-
+    void addLetter(Letter letter);
+    void addParcel(Parcel parcel);
 };
 
 class PostalOffice{
@@ -122,5 +125,5 @@ public:
     void loadPostmans(std::string filename);
     void showPostmans();
     void loadPackage(std::string letterFilename,std::string parcelFilename);
-
+    void sortPackage();
 };
