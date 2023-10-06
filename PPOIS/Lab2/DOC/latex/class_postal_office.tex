@@ -1,0 +1,342 @@
+\doxysection{Postal\+Office Class Reference}
+\hypertarget{class_postal_office}{}\label{class_postal_office}\index{PostalOffice@{PostalOffice}}
+
+
+class postaloffice  
+
+
+
+
+{\ttfamily \#include $<$postal\+\_\+office.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_postal_office_a581347cb9aed6634503c24b662e85609}{Postal\+Office}} (const std\+::string \&address\+\_\+, const std\+::string \&opening\+Hours\+\_\+, const std\+::string \&service\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new Postal Office object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_ae33fd61efc8e55160429eaf6d8f6f5e0}{display\+Info}} () const
+\begin{DoxyCompactList}\small\item\em display info about postaloffice \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_postal_office_af08c0063cf859677fe3316cc260e40f7}{get\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Get the Address object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_postal_office_acdfe990f5338679d71162a0039e73200}{get\+Opening\+Hours}} () const
+\begin{DoxyCompactList}\small\item\em Get the Opening Hours object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_postal_office_ae868c9e6db2e60f2f4001d93b5afae33}{get\+Service}} () const
+\begin{DoxyCompactList}\small\item\em Get the Service object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_ae41a0e53378b94c5d6e39de85fa1147f}{load\+Clients}} (std\+::ifstream \&file\+Date)
+\begin{DoxyCompactList}\small\item\em load client from file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_af780ce78f5f8070aa65cf99046157002}{show\+Clients}} ()
+\begin{DoxyCompactList}\small\item\em show all clients \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_a7f8eb0437134ab9edd40bc89d947f853}{load\+Postmans}} (std\+::ifstream \&file\+Date)
+\begin{DoxyCompactList}\small\item\em load postman from file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_a3af8104b57481ef041bde88a6e2cd204}{show\+Postmans}} ()
+\begin{DoxyCompactList}\small\item\em show all postmans \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_afb62a641968d3b597a1a67095657b391}{load\+Letter}} (std\+::ifstream \&file\+Date)
+\begin{DoxyCompactList}\small\item\em load letter from file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_af4a2609a85f9b32c956b16de39064ab0}{load\+Parcel}} (std\+::ifstream \&file\+Date)
+\begin{DoxyCompactList}\small\item\em load parcel from file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_a0697b4906b73b1e0ea3ced991c343295}{sort\+Package}} ()
+\begin{DoxyCompactList}\small\item\em sort all packege in postaloffice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_postal_office_a986529cc727141f3caf7dad303740d85}{load\+Date}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em load all date from file \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_postal_office_a3c558d3ee5517cfe59110f7d4fb108e7}{get\+Number\+Of\+Clients}} ()
+\begin{DoxyCompactList}\small\item\em Get the Number Of Clients object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_postal_office_a2b203d4b5c9c9fc14e676590dbc894cb}{get\+Number\+Of\+Postmans}} ()
+\begin{DoxyCompactList}\small\item\em Get the Number Of Postmans object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_postal_office_a41dd7d242e00a0cb44fb5c434f4ca057}{get\+Package\+In\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_package}{Package} In Stock object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_postal_office_afcb4b92b81aa4736485d47b77061e55d}{address}}
+\item 
+std\+::string \mbox{\hyperlink{class_postal_office_a32e8c736fe6972e69c4503c4f1e4ea14}{opening\+Hours}}
+\item 
+std\+::string \mbox{\hyperlink{class_postal_office_a388662f77b5ae077788d6248f1f8811c}{service}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_customer}{Customer}} $>$ \mbox{\hyperlink{class_postal_office_add8fbf0e098e5d108f06fa27a40eaf27}{clients}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_sorter}{Sorter}} $>$ \mbox{\hyperlink{class_postal_office_a396fb140727c4e91d955f2804fedaeb1}{sorters}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_deliveryman}{Deliveryman}} $>$ \mbox{\hyperlink{class_postal_office_a8b3bf500839b980cbdb050e40d8974d9}{deliverymans}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_letter}{Letter}} $>$ \mbox{\hyperlink{class_postal_office_ad789a68f8554ea404e89e3ac708a77bf}{letters}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ \mbox{\hyperlink{class_postal_office_a0b5314a8f7643eb2107675a89490c37e}{parcels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class postaloffice 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_postal_office_a581347cb9aed6634503c24b662e85609}\label{class_postal_office_a581347cb9aed6634503c24b662e85609} 
+\index{PostalOffice@{PostalOffice}!PostalOffice@{PostalOffice}}
+\index{PostalOffice@{PostalOffice}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{PostalOffice()}{PostalOffice()}}
+{\footnotesize\ttfamily Postal\+Office\+::\+Postal\+Office (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address\+\_\+,  }\item[{const std\+::string \&}]{opening\+Hours\+\_\+,  }\item[{const std\+::string \&}]{service\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Postal Office object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+\_\+} & \\
+\hline
+{\em opening\+Hours\+\_\+} & \\
+\hline
+{\em service\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_postal_office_ae33fd61efc8e55160429eaf6d8f6f5e0}\label{class_postal_office_ae33fd61efc8e55160429eaf6d8f6f5e0} 
+\index{PostalOffice@{PostalOffice}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Postal\+Office\+::display\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+display info about postaloffice 
+
+\Hypertarget{class_postal_office_af08c0063cf859677fe3316cc260e40f7}\label{class_postal_office_af08c0063cf859677fe3316cc260e40f7} 
+\index{PostalOffice@{PostalOffice}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Address object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string address 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_a3c558d3ee5517cfe59110f7d4fb108e7}\label{class_postal_office_a3c558d3ee5517cfe59110f7d4fb108e7} 
+\index{PostalOffice@{PostalOffice}!getNumberOfClients@{getNumberOfClients}}
+\index{getNumberOfClients@{getNumberOfClients}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getNumberOfClients()}{getNumberOfClients()}}
+{\footnotesize\ttfamily int Postal\+Office\+::get\+Number\+Of\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Number Of Clients object. 
+
+\begin{DoxyReturn}{Returns}
+int number of clients 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_a2b203d4b5c9c9fc14e676590dbc894cb}\label{class_postal_office_a2b203d4b5c9c9fc14e676590dbc894cb} 
+\index{PostalOffice@{PostalOffice}!getNumberOfPostmans@{getNumberOfPostmans}}
+\index{getNumberOfPostmans@{getNumberOfPostmans}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getNumberOfPostmans()}{getNumberOfPostmans()}}
+{\footnotesize\ttfamily int Postal\+Office\+::get\+Number\+Of\+Postmans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Number Of Postmans object. 
+
+\begin{DoxyReturn}{Returns}
+int number of clients 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_acdfe990f5338679d71162a0039e73200}\label{class_postal_office_acdfe990f5338679d71162a0039e73200} 
+\index{PostalOffice@{PostalOffice}!getOpeningHours@{getOpeningHours}}
+\index{getOpeningHours@{getOpeningHours}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getOpeningHours()}{getOpeningHours()}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::get\+Opening\+Hours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Opening Hours object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string opining hours 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_a41dd7d242e00a0cb44fb5c434f4ca057}\label{class_postal_office_a41dd7d242e00a0cb44fb5c434f4ca057} 
+\index{PostalOffice@{PostalOffice}!getPackageInStock@{getPackageInStock}}
+\index{getPackageInStock@{getPackageInStock}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getPackageInStock()}{getPackageInStock()}}
+{\footnotesize\ttfamily int Postal\+Office\+::get\+Package\+In\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \doxylink{class_package}{Package} In Stock object. 
+
+\begin{DoxyReturn}{Returns}
+int number package on postaloffice 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_ae868c9e6db2e60f2f4001d93b5afae33}\label{class_postal_office_ae868c9e6db2e60f2f4001d93b5afae33} 
+\index{PostalOffice@{PostalOffice}!getService@{getService}}
+\index{getService@{getService}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{getService()}{getService()}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::get\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Service object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string service 
+\end{DoxyReturn}
+\Hypertarget{class_postal_office_ae41a0e53378b94c5d6e39de85fa1147f}\label{class_postal_office_ae41a0e53378b94c5d6e39de85fa1147f} 
+\index{PostalOffice@{PostalOffice}!loadClients@{loadClients}}
+\index{loadClients@{loadClients}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{loadClients()}{loadClients()}}
+{\footnotesize\ttfamily void Postal\+Office\+::load\+Clients (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file\+Date }\end{DoxyParamCaption})}
+
+
+
+load client from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Date} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_postal_office_a986529cc727141f3caf7dad303740d85}\label{class_postal_office_a986529cc727141f3caf7dad303740d85} 
+\index{PostalOffice@{PostalOffice}!loadDate@{loadDate}}
+\index{loadDate@{loadDate}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{loadDate()}{loadDate()}}
+{\footnotesize\ttfamily void Postal\+Office\+::load\+Date (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+load all date from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_postal_office_afb62a641968d3b597a1a67095657b391}\label{class_postal_office_afb62a641968d3b597a1a67095657b391} 
+\index{PostalOffice@{PostalOffice}!loadLetter@{loadLetter}}
+\index{loadLetter@{loadLetter}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{loadLetter()}{loadLetter()}}
+{\footnotesize\ttfamily void Postal\+Office\+::load\+Letter (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file\+Date }\end{DoxyParamCaption})}
+
+
+
+load letter from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Date} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_postal_office_af4a2609a85f9b32c956b16de39064ab0}\label{class_postal_office_af4a2609a85f9b32c956b16de39064ab0} 
+\index{PostalOffice@{PostalOffice}!loadParcel@{loadParcel}}
+\index{loadParcel@{loadParcel}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{loadParcel()}{loadParcel()}}
+{\footnotesize\ttfamily void Postal\+Office\+::load\+Parcel (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file\+Date }\end{DoxyParamCaption})}
+
+
+
+load parcel from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Date} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_postal_office_a7f8eb0437134ab9edd40bc89d947f853}\label{class_postal_office_a7f8eb0437134ab9edd40bc89d947f853} 
+\index{PostalOffice@{PostalOffice}!loadPostmans@{loadPostmans}}
+\index{loadPostmans@{loadPostmans}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{loadPostmans()}{loadPostmans()}}
+{\footnotesize\ttfamily void Postal\+Office\+::load\+Postmans (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file\+Date }\end{DoxyParamCaption})}
+
+
+
+load postman from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Date} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_postal_office_af780ce78f5f8070aa65cf99046157002}\label{class_postal_office_af780ce78f5f8070aa65cf99046157002} 
+\index{PostalOffice@{PostalOffice}!showClients@{showClients}}
+\index{showClients@{showClients}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{showClients()}{showClients()}}
+{\footnotesize\ttfamily void Postal\+Office\+::show\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+show all clients 
+
+\Hypertarget{class_postal_office_a3af8104b57481ef041bde88a6e2cd204}\label{class_postal_office_a3af8104b57481ef041bde88a6e2cd204} 
+\index{PostalOffice@{PostalOffice}!showPostmans@{showPostmans}}
+\index{showPostmans@{showPostmans}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{showPostmans()}{showPostmans()}}
+{\footnotesize\ttfamily void Postal\+Office\+::show\+Postmans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+show all postmans 
+
+\Hypertarget{class_postal_office_a0697b4906b73b1e0ea3ced991c343295}\label{class_postal_office_a0697b4906b73b1e0ea3ced991c343295} 
+\index{PostalOffice@{PostalOffice}!sortPackage@{sortPackage}}
+\index{sortPackage@{sortPackage}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{sortPackage()}{sortPackage()}}
+{\footnotesize\ttfamily void Postal\+Office\+::sort\+Package (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sort all packege in postaloffice 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_postal_office_afcb4b92b81aa4736485d47b77061e55d}\label{class_postal_office_afcb4b92b81aa4736485d47b77061e55d} 
+\index{PostalOffice@{PostalOffice}!address@{address}}
+\index{address@{address}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::address\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_add8fbf0e098e5d108f06fa27a40eaf27}\label{class_postal_office_add8fbf0e098e5d108f06fa27a40eaf27} 
+\index{PostalOffice@{PostalOffice}!clients@{clients}}
+\index{clients@{clients}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{clients}{clients}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_customer}{Customer}}$>$ Postal\+Office\+::clients\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_a8b3bf500839b980cbdb050e40d8974d9}\label{class_postal_office_a8b3bf500839b980cbdb050e40d8974d9} 
+\index{PostalOffice@{PostalOffice}!deliverymans@{deliverymans}}
+\index{deliverymans@{deliverymans}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{deliverymans}{deliverymans}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_deliveryman}{Deliveryman}}$>$ Postal\+Office\+::deliverymans\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_ad789a68f8554ea404e89e3ac708a77bf}\label{class_postal_office_ad789a68f8554ea404e89e3ac708a77bf} 
+\index{PostalOffice@{PostalOffice}!letters@{letters}}
+\index{letters@{letters}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{letters}{letters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_letter}{Letter}}$>$ Postal\+Office\+::letters\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_a32e8c736fe6972e69c4503c4f1e4ea14}\label{class_postal_office_a32e8c736fe6972e69c4503c4f1e4ea14} 
+\index{PostalOffice@{PostalOffice}!openingHours@{openingHours}}
+\index{openingHours@{openingHours}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{openingHours}{openingHours}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::opening\+Hours\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_a0b5314a8f7643eb2107675a89490c37e}\label{class_postal_office_a0b5314a8f7643eb2107675a89490c37e} 
+\index{PostalOffice@{PostalOffice}!parcels@{parcels}}
+\index{parcels@{parcels}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{parcels}{parcels}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_parcel}{Parcel}}$>$ Postal\+Office\+::parcels\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_a388662f77b5ae077788d6248f1f8811c}\label{class_postal_office_a388662f77b5ae077788d6248f1f8811c} 
+\index{PostalOffice@{PostalOffice}!service@{service}}
+\index{service@{service}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{service}{service}}
+{\footnotesize\ttfamily std\+::string Postal\+Office\+::service\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_postal_office_a396fb140727c4e91d955f2804fedaeb1}\label{class_postal_office_a396fb140727c4e91d955f2804fedaeb1} 
+\index{PostalOffice@{PostalOffice}!sorters@{sorters}}
+\index{sorters@{sorters}!PostalOffice@{PostalOffice}}
+\doxysubsubsection{\texorpdfstring{sorters}{sorters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_sorter}{Sorter}}$>$ Postal\+Office\+::sorters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/user/\+Desktop/УНИК/\+BSUIR/\+PPOIS/\+Lab2/inc/\mbox{\hyperlink{postal__office_8h}{postal\+\_\+office.\+h}}\end{DoxyCompactItemize}
