@@ -1,6 +1,6 @@
 #include "../inc/cube.h"
 
-Cube::Cube()
+Cube::Cube(char choice,std::string filename)
 {
 }
 void Cube::load_cube(std::string filename)
