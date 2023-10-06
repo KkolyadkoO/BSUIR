@@ -17,9 +17,9 @@ file(GLOB_RECURSE SRC_FILES
 #.gcda
 #.gcov
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
-    option(SERIALIZATION_TESTS "build tests (or on)" OFF)
+    option(SERIALIZATION_TESTS "build tests (or on)" ON)
     if(SERIALIZATION_TESTS)
-            add_library(tests ${SRC_FILES})
+            add_library(test ${SRC_FILES})
             enable_testing()
             add_subdirectory(test)
     endif()
