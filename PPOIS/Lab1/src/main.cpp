@@ -5,14 +5,10 @@ using namespace std;
 
 int main()
 {   int action;
-    Cube cube;
-    char load;
-    cout <<"Load cube(y/n)";
-    cin >> load;
-    if(load=='y')
-        cube.load_cube("input.txt");
-    else
-        cube.generation_cube();
+    char choice;
+    cout << "load cube(y/n)";
+    cin >> choice;
+    Cube cube(choice,"input.txt");
     do
     {
         cout << "1-rotate_the_top_edge_clockwise\n2-rotate_the_left_edge_clockwise\n3-rotate_the_front_edge_clockwise\n4-rotate_the_right_edge_clockwise\n5-rotate_the_back_edge_clockwise\n6-rotate_the_bottom_edge_clockwise\n7-rotate_the_top_edge_counter_clockwise\n8-rotate_the_left_edge_counter_clockwise\n9-rotate_the_front_edge_counter_clockwise\n10-rotate_the_right_edge_counter_clockwise\n11-rotate_the_back_edge_counter_clockwise\n12-rotate_the_bottom_edge_counter_clockwise\n0-exit";

@@ -1,11 +1,13 @@
 #include "../inc/cube.h"
 
+#include "../inc/cube.h"
+
 Cube::Cube(char choice,std::string filename)
 {
-}
-void Cube::load_cube(std::string filename)
-{
-    std::string buff;
+    
+    if(choice == 'y')
+    {
+        std::string buff;
         std::ifstream input(filename);
         if (!input.is_open()) 
             std::cout << "Файл не может быть открыт!\n"; 
@@ -14,9 +16,14 @@ void Cube::load_cube(std::string filename)
             input >> buff; // считали расстановку кубика из файла
             input.close(); // закрываем файл
         }
-        
         write_cube(buff);
-
+    }
+    else
+    {
+        write_cube("yyyyyyyyyrrrrrrrrrbbbbbbbbbooooooooogggggggggwwwwwwwww");
+        generation_cube();
+    }
+    
 }
 Cube::Cube(std::string cube_inp)
 {
