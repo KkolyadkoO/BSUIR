@@ -12,7 +12,7 @@ concept_bun
 concept_bun <= nrel_sc_text_translation:...
       (*
             <- definition;;
-            -> [Булочка - булочное изделие, выпечка небольшого размер; может быть с начинкой, добавками или без них]
+            -> [Булочка - это выпечка,  с начинкой, добавками]
             (* <- lang_ru;;*);;
       *);;
 
@@ -26,14 +26,14 @@ concept_bun => nrel_compound:...
 concept_bun => nrel_major_type_of_filling:...
   (*
       <- sc_node_tuple;;
-      -> cherry filling;;
-      -> apple filling;;
+      -> cherry_filling;;
+      -> apple_filling;;
   *);;
 
 ingredients_set
       <- sc_node_class;
-      -> cherry filling;
-      -> apple filling;;
+      -> cherry_filling;
+      -> apple_filling;;
 
 concept_bun => nrel_country_of_original: USA;;
 country_set
