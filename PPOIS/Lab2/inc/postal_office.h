@@ -4,21 +4,13 @@
 #include <vector>
 
 /**
- * @brief Класс содержащий адрес посылки
+ * @brief A class containing the address of the parcel
  *
  */
 class DeliveryAddress
 {
 private:
-    /**
-     * @brief Индекс
-     *
-     */
     std::string postcode;
-    /**
-     * @brief  Адресс
-     *
-     */
     std::string address;
 
 public:
@@ -43,7 +35,7 @@ public:
     std::string getAddress();
 };
 /**
- * @brief Класс родитель для клиента и работника
+ * @brief Parent class for client and employee
  *
  */
 class Person
@@ -52,10 +44,10 @@ protected:
     /**
      * @brief Construct a new Person object
      *
-     * @param name_ Name
-     * @param address_ Address
-     * @param phoneNumber_ Number
-     * @param mail_ mail
+     * @param name_ Persons's name
+     * @param address_ Persons's address
+     * @param phoneNumber_ Persons's number
+     * @param mail_ Persons's mail
      */
     Person(const std::string &name_, const std::string &address_, const std::string &phoneNumber_, const std::string &mail_);
 
@@ -67,7 +59,7 @@ private:
 
 public:
     /**
-     * @brief Вывод информации о человеке
+     * @brief Displaying information about a person
      *
      */
     virtual void displayInfo() const;
@@ -97,42 +89,33 @@ public:
     std::string getMail() const;
 };
 /**
- * @brief class Client
+ * @brief A class Customer
  *
  */
 class Customer : public Person
 {
 private:
-    /**
-     * @brief client's ID
-     *
-     */
     int clientID;
-    /**
-     * @brief Postcode
-     *
-     */
     std::string postcode;
-
 public:
     /**
      * @brief Construct a new Customer object
      *
-     * @param name_ Client's Name
-     * @param address_ Client's Address
-     * @param phoneNumber_ Client's Number
-     * @param mail_ Client's mail
-     * @param clientID_ Client's ID
-     * @param postcode_ client's postcode
+     * @param name_ Customer's Name
+     * @param address_ Customer's Address
+     * @param phoneNumber_ Customer's Number
+     * @param mail_ Customer's mail
+     * @param clientID_ Customer's ID
+     * @param postcode_ Customer's postcode
      */
     Customer(const std::string &name_, const std::string &address_, const std::string &phoneNumber_, const std::string &mail_, int clientID_, const std::string postcode_);
     /**
-     * @brief Выводит информацию о клиенте
+     * @brief Displays information about the customer
      *
      */
     void displayInfo() const override;
     /**
-     * @brief Get the Client ID object
+     * @brief Get the customer ID object
      *
      * @return int clientID
      */
@@ -145,16 +128,12 @@ public:
     std::string getPostcode();
 };
 /**
- * @brief class Postman
+ * @brief A class Postman
  *
  */
 class PostMan : public Person
 {
 private:
-    /**
-     * @brief Salaty
-     *
-     */
     int salary;
 
 public:
@@ -169,7 +148,7 @@ public:
      */
     PostMan(const std::string &name_, const std::string &address_, const std::string &phoneNumber_, const std::string &mail_, int salary_);
     /**
-     * @brief Display info about postman
+     * @brief Display info about the postman
      *
      */
     void displayInfo() const override;
@@ -181,7 +160,7 @@ public:
     int getSalary();
 };
 /**
- * @brief class package
+ * @brief A class package
  *
  */
 class Package
@@ -198,15 +177,7 @@ protected:
     Package(const Customer sender_, const Customer recipient_, double weight_, const std::string &location_);
 
 private:
-    /**
-     * @brief Package's location
-     *
-     */
     std::string location;
-    /**
-     * @brief on post office package?
-     *
-     */
     bool onPostOffice = false;
 
 public:
@@ -233,7 +204,7 @@ public:
      */
     void setOnPostOffice(bool value);
     /**
-     * @brief Get the On Post Office object
+     * @brief Get the parcel is at the post office
      *
      * @return true
      * @return false
@@ -241,7 +212,7 @@ public:
     bool getOnPostOffice();
 };
 /**
- * @brief class letter
+ * @brief A class letter
  *
  */
 class Letter : public Package
@@ -260,7 +231,7 @@ public:
     Letter(Customer sender_, Customer recipient_, double weight_, const std::string &location_, const std::string &letterText_);
 };
 /**
- * @brief parcel
+ * @brief A class parcel
  *
  */
 class Parcel : public Package
@@ -285,7 +256,7 @@ public:
     Parcel(Customer sender_, Customer recipient_, double weight_, const std::string &location_, double length_, double width_, double height_);
 };
 /**
- * @brief class sorter
+ * @brief A class sorter
  *
  */
 class Sorter : public PostMan
@@ -311,7 +282,7 @@ public:
     void sortPackage(std::vector<Letter> &letters, std::vector<Parcel> &parcels, std::string postOfficeAddress);
 };
 /**
- * @brief class deliveryman
+ * @brief A class deliveryman
  *
  */
 class Deliveryman : public PostMan
@@ -351,7 +322,7 @@ public:
     int getPackageInStock();
 };
 /**
- * @brief class postaloffice
+ * @brief A class postaloffice
  *
  */
 class PostalOffice

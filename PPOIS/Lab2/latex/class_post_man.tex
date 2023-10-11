@@ -1,0 +1,121 @@
+\doxysection{Post\+Man Class Reference}
+\hypertarget{class_post_man}{}\label{class_post_man}\index{PostMan@{PostMan}}
+
+
+A class Postman.  
+
+
+
+
+{\ttfamily \#include $<$postal\+\_\+office.\+h$>$}
+
+Inheritance diagram for Post\+Man\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_post_man}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_post_man_a0864faac6f53145993ffc9dc0a64ff3f}{Post\+Man}} (const std\+::string \&name\+\_\+, const std\+::string \&address\+\_\+, const std\+::string \&phone\+Number\+\_\+, const std\+::string \&mail\+\_\+, int salary\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new Postman object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_post_man_af6729fb7e9738813a619346f3519d1fb}{display\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Display info about the postman. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_post_man_ae8c45e25615911b0b4e48a89e8446f37}{get\+Salary}} ()
+\begin{DoxyCompactList}\small\item\em Get the Salary object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_person_a9c7e71b74d9b97a16dbe5610efbd4344}{get\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Get the Address object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_ab20f096fdfd5201818c45754af4c3e3b}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_a833199083b16bc1db396e599c9b0f77a}{get\+Phone\+Numer}} () const
+\begin{DoxyCompactList}\small\item\em Get the Phone Numer object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_a88755f2665381b9d4e1f966d8d52181b}{get\+Mail}} () const
+\begin{DoxyCompactList}\small\item\em Get the Mail object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_post_man_a4315716f1ddafc9217e95b5ecca4e120}{salary}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_person_a41387fea29b65ee144bab876dc8b800e}{Person}} (const std\+::string \&name\+\_\+, const std\+::string \&address\+\_\+, const std\+::string \&phone\+Number\+\_\+, const std\+::string \&mail\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_person}{Person} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class Postman. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_post_man_a0864faac6f53145993ffc9dc0a64ff3f}\label{class_post_man_a0864faac6f53145993ffc9dc0a64ff3f} 
+\index{PostMan@{PostMan}!PostMan@{PostMan}}
+\index{PostMan@{PostMan}!PostMan@{PostMan}}
+\doxysubsubsection{\texorpdfstring{PostMan()}{PostMan()}}
+{\footnotesize\ttfamily Post\+Man\+::\+Post\+Man (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+\_\+,  }\item[{const std\+::string \&}]{address\+\_\+,  }\item[{const std\+::string \&}]{phone\+Number\+\_\+,  }\item[{const std\+::string \&}]{mail\+\_\+,  }\item[{int}]{salary\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Postman object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+} & Postman\textquotesingle{}s Name \\
+\hline
+{\em address\+\_\+} & Postman\textquotesingle{}s address \\
+\hline
+{\em phone\+Number\+\_\+} & Postman\textquotesingle{}s phone number \\
+\hline
+{\em mail\+\_\+} & Postman\textquotesingle{}s mail \\
+\hline
+{\em salary\+\_\+} & Postman\textquotesingle{}s salary \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_post_man_af6729fb7e9738813a619346f3519d1fb}\label{class_post_man_af6729fb7e9738813a619346f3519d1fb} 
+\index{PostMan@{PostMan}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!PostMan@{PostMan}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily void Post\+Man\+::display\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Display info about the postman. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_person_a14399bc5df4b76c8dcc606ab0ab892bb}{Person}}.
+
+\Hypertarget{class_post_man_ae8c45e25615911b0b4e48a89e8446f37}\label{class_post_man_ae8c45e25615911b0b4e48a89e8446f37} 
+\index{PostMan@{PostMan}!getSalary@{getSalary}}
+\index{getSalary@{getSalary}!PostMan@{PostMan}}
+\doxysubsubsection{\texorpdfstring{getSalary()}{getSalary()}}
+{\footnotesize\ttfamily int Post\+Man\+::get\+Salary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Salary object. 
+
+\begin{DoxyReturn}{Returns}
+int salary 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_post_man_a4315716f1ddafc9217e95b5ecca4e120}\label{class_post_man_a4315716f1ddafc9217e95b5ecca4e120} 
+\index{PostMan@{PostMan}!salary@{salary}}
+\index{salary@{salary}!PostMan@{PostMan}}
+\doxysubsubsection{\texorpdfstring{salary}{salary}}
+{\footnotesize\ttfamily int Post\+Man\+::salary\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{postal__office_8h}{postal\+\_\+office.\+h}}\end{DoxyCompactItemize}

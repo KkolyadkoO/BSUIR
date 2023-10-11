@@ -1,0 +1,156 @@
+\doxysection{Deliveryman Class Reference}
+\hypertarget{class_deliveryman}{}\label{class_deliveryman}\index{Deliveryman@{Deliveryman}}
+
+
+A class deliveryman.  
+
+
+
+
+{\ttfamily \#include $<$postal\+\_\+office.\+h$>$}
+
+Inheritance diagram for Deliveryman\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_deliveryman}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_deliveryman_a5ddfeddd4e743aae43a694226a9f1d60}{Deliveryman}} (const std\+::string \&name\+\_\+, const std\+::string \&address\+\_\+, const std\+::string \&phone\+Number\+\_\+, const std\+::string \&mail\+\_\+, int salary\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_deliveryman}{Deliveryman} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deliveryman_a825c415e345a1e702c689aa4f9b3c67f}{add\+Letter}} (\mbox{\hyperlink{class_letter}{Letter}} letter)
+\begin{DoxyCompactList}\small\item\em add letter in letters\+In\+Stock \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deliveryman_ab22ca4694c78c89ac8c8e8529970d85d}{add\+Parcel}} (\mbox{\hyperlink{class_parcel}{Parcel}} parcel)
+\begin{DoxyCompactList}\small\item\em add letter in parcel\+In\+Stock \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_deliveryman_af143c73d6e429ad92d81b0389e838ad4}{get\+Package\+In\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_package}{Package} In Stock object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_post_man}{Post\+Man}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_post_man_a0864faac6f53145993ffc9dc0a64ff3f}{Post\+Man}} (const std\+::string \&name\+\_\+, const std\+::string \&address\+\_\+, const std\+::string \&phone\+Number\+\_\+, const std\+::string \&mail\+\_\+, int salary\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new Postman object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_post_man_af6729fb7e9738813a619346f3519d1fb}{display\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Display info about the postman. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_post_man_ae8c45e25615911b0b4e48a89e8446f37}{get\+Salary}} ()
+\begin{DoxyCompactList}\small\item\em Get the Salary object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_person_a9c7e71b74d9b97a16dbe5610efbd4344}{get\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Get the Address object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_ab20f096fdfd5201818c45754af4c3e3b}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_a833199083b16bc1db396e599c9b0f77a}{get\+Phone\+Numer}} () const
+\begin{DoxyCompactList}\small\item\em Get the Phone Numer object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_person_a88755f2665381b9d4e1f966d8d52181b}{get\+Mail}} () const
+\begin{DoxyCompactList}\small\item\em Get the Mail object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_letter}{Letter}} $>$ \mbox{\hyperlink{class_deliveryman_a481f7b8e8a12a238a3e369f908135e84}{letters\+In\+Stock}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ \mbox{\hyperlink{class_deliveryman_ac7b94b4213446ca2aae4283732559dca}{parcel\+In\+Stock}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_person}{Person}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_person_a41387fea29b65ee144bab876dc8b800e}{Person}} (const std\+::string \&name\+\_\+, const std\+::string \&address\+\_\+, const std\+::string \&phone\+Number\+\_\+, const std\+::string \&mail\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_person}{Person} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class deliveryman. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_deliveryman_a5ddfeddd4e743aae43a694226a9f1d60}\label{class_deliveryman_a5ddfeddd4e743aae43a694226a9f1d60} 
+\index{Deliveryman@{Deliveryman}!Deliveryman@{Deliveryman}}
+\index{Deliveryman@{Deliveryman}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{Deliveryman()}{Deliveryman()}}
+{\footnotesize\ttfamily Deliveryman\+::\+Deliveryman (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+\_\+,  }\item[{const std\+::string \&}]{address\+\_\+,  }\item[{const std\+::string \&}]{phone\+Number\+\_\+,  }\item[{const std\+::string \&}]{mail\+\_\+,  }\item[{int}]{salary\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_deliveryman}{Deliveryman} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+} & \\
+\hline
+{\em address\+\_\+} & \\
+\hline
+{\em phone\+Number\+\_\+} & \\
+\hline
+{\em mail\+\_\+} & \\
+\hline
+{\em salary\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_deliveryman_a825c415e345a1e702c689aa4f9b3c67f}\label{class_deliveryman_a825c415e345a1e702c689aa4f9b3c67f} 
+\index{Deliveryman@{Deliveryman}!addLetter@{addLetter}}
+\index{addLetter@{addLetter}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{addLetter()}{addLetter()}}
+{\footnotesize\ttfamily void Deliveryman\+::add\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_letter}{Letter}}}]{letter }\end{DoxyParamCaption})}
+
+
+
+add letter in letters\+In\+Stock 
+
+
+\begin{DoxyParams}{Parameters}
+{\em letter} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deliveryman_ab22ca4694c78c89ac8c8e8529970d85d}\label{class_deliveryman_ab22ca4694c78c89ac8c8e8529970d85d} 
+\index{Deliveryman@{Deliveryman}!addParcel@{addParcel}}
+\index{addParcel@{addParcel}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{addParcel()}{addParcel()}}
+{\footnotesize\ttfamily void Deliveryman\+::add\+Parcel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_parcel}{Parcel}}}]{parcel }\end{DoxyParamCaption})}
+
+
+
+add letter in parcel\+In\+Stock 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parcel} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_deliveryman_af143c73d6e429ad92d81b0389e838ad4}\label{class_deliveryman_af143c73d6e429ad92d81b0389e838ad4} 
+\index{Deliveryman@{Deliveryman}!getPackageInStock@{getPackageInStock}}
+\index{getPackageInStock@{getPackageInStock}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{getPackageInStock()}{getPackageInStock()}}
+{\footnotesize\ttfamily int Deliveryman\+::get\+Package\+In\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \doxylink{class_package}{Package} In Stock object. 
+
+\begin{DoxyReturn}{Returns}
+int number of all packege in stock 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_deliveryman_a481f7b8e8a12a238a3e369f908135e84}\label{class_deliveryman_a481f7b8e8a12a238a3e369f908135e84} 
+\index{Deliveryman@{Deliveryman}!lettersInStock@{lettersInStock}}
+\index{lettersInStock@{lettersInStock}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{lettersInStock}{lettersInStock}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_letter}{Letter}}$>$ Deliveryman\+::letters\+In\+Stock\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_deliveryman_ac7b94b4213446ca2aae4283732559dca}\label{class_deliveryman_ac7b94b4213446ca2aae4283732559dca} 
+\index{Deliveryman@{Deliveryman}!parcelInStock@{parcelInStock}}
+\index{parcelInStock@{parcelInStock}!Deliveryman@{Deliveryman}}
+\doxysubsubsection{\texorpdfstring{parcelInStock}{parcelInStock}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_parcel}{Parcel}}$>$ Deliveryman\+::parcel\+In\+Stock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{postal__office_8h}{postal\+\_\+office.\+h}}\end{DoxyCompactItemize}

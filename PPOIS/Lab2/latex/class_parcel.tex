@@ -1,0 +1,118 @@
+\doxysection{Parcel Class Reference}
+\hypertarget{class_parcel}{}\label{class_parcel}\index{Parcel@{Parcel}}
+
+
+A class parcel.  
+
+
+
+
+{\ttfamily \#include $<$postal\+\_\+office.\+h$>$}
+
+Inheritance diagram for Parcel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_parcel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_parcel_a70cad3ffdc4e545ec85284395e909ef8}{Parcel}} (\mbox{\hyperlink{class_customer}{Customer}} sender\+\_\+, \mbox{\hyperlink{class_customer}{Customer}} recipient\+\_\+, double weight\+\_\+, const std\+::string \&location\+\_\+, double length\+\_\+, double width\+\_\+, double height\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_parcel}{Parcel} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_package}{Package}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_package_a59106666b30824dcee2e016cfabaff63}{get\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Get the Location object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_package_aac3bc0b69da27a1bf8f5a04ef042609c}{set\+Location}} (const std\+::string \&location\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Location object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_package_aa40d063c2b8b8e46ff0e9b582c6da8f3}{set\+On\+Post\+Office}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the On Post Office object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_package_add959a3c51cc2b8aded13c2e118970e0}{get\+On\+Post\+Office}} ()
+\begin{DoxyCompactList}\small\item\em Get the parcel is at the post office. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_parcel_ace29923107728e8f2a7d53407072476a}{length}}
+\item 
+double \mbox{\hyperlink{class_parcel_a53c7631d7581fb688088b326159b8e54}{width}}
+\item 
+double \mbox{\hyperlink{class_parcel_a33bfd43687a813d96d8ee81f30a8a5dd}{height}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_package}{Package}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_customer}{Customer}} \mbox{\hyperlink{class_package_ac89e750ac00907cb0fc8ac29b8eabe23}{sender}}
+\item 
+const \mbox{\hyperlink{class_customer}{Customer}} \mbox{\hyperlink{class_package_aa5899858e56246fe33024ac94c5b5a1b}{recipient}}
+\item 
+const double \mbox{\hyperlink{class_package_a4cb0a2b601b45e4552ba4d3e2a8fe756}{weight}}
+\item 
+\mbox{\hyperlink{class_delivery_address}{Delivery\+Address}} \mbox{\hyperlink{class_package_a365782b69352f96176d219442a0c9c6d}{address}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_package}{Package}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_package_afc30e34cdf53cc411c93c291af1a7080}{Package}} (const \mbox{\hyperlink{class_customer}{Customer}} sender\+\_\+, const \mbox{\hyperlink{class_customer}{Customer}} recipient\+\_\+, double weight\+\_\+, const std\+::string \&location\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_package}{Package} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class parcel. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_parcel_a70cad3ffdc4e545ec85284395e909ef8}\label{class_parcel_a70cad3ffdc4e545ec85284395e909ef8} 
+\index{Parcel@{Parcel}!Parcel@{Parcel}}
+\index{Parcel@{Parcel}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{Parcel()}{Parcel()}}
+{\footnotesize\ttfamily Parcel\+::\+Parcel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer}{Customer}}}]{sender\+\_\+,  }\item[{\mbox{\hyperlink{class_customer}{Customer}}}]{recipient\+\_\+,  }\item[{double}]{weight\+\_\+,  }\item[{const std\+::string \&}]{location\+\_\+,  }\item[{double}]{length\+\_\+,  }\item[{double}]{width\+\_\+,  }\item[{double}]{height\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_parcel}{Parcel} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender\+\_\+} & \\
+\hline
+{\em recipient\+\_\+} & \\
+\hline
+{\em weight\+\_\+} & \\
+\hline
+{\em location\+\_\+} & \\
+\hline
+{\em length\+\_\+} & \\
+\hline
+{\em width\+\_\+} & \\
+\hline
+{\em height\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_parcel_a33bfd43687a813d96d8ee81f30a8a5dd}\label{class_parcel_a33bfd43687a813d96d8ee81f30a8a5dd} 
+\index{Parcel@{Parcel}!height@{height}}
+\index{height@{height}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily double Parcel\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_parcel_ace29923107728e8f2a7d53407072476a}\label{class_parcel_ace29923107728e8f2a7d53407072476a} 
+\index{Parcel@{Parcel}!length@{length}}
+\index{length@{length}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily double Parcel\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_parcel_a53c7631d7581fb688088b326159b8e54}\label{class_parcel_a53c7631d7581fb688088b326159b8e54} 
+\index{Parcel@{Parcel}!width@{width}}
+\index{width@{width}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily double Parcel\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{postal__office_8h}{postal\+\_\+office.\+h}}\end{DoxyCompactItemize}
