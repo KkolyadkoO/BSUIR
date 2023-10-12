@@ -1,0 +1,26 @@
+\doxysection{deliveryman.\+h}
+\hypertarget{deliveryman_8h_source}{}\label{deliveryman_8h_source}\index{/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab2/inc/deliveryman.h@{/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab2/inc/deliveryman.h}}
+\mbox{\hyperlink{deliveryman_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{postman_8h}{postman.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{letter_8h}{letter.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parcel_8h}{parcel.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deliveryman}{Deliveryman}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_post_man}{PostMan}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<Letter>\ \mbox{\hyperlink{class_deliveryman_a481f7b8e8a12a238a3e369f908135e84}{lettersInStock}};}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Parcel>\ \mbox{\hyperlink{class_deliveryman_ac7b94b4213446ca2aae4283732559dca}{parcelInStock}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_deliveryman_a5ddfeddd4e743aae43a694226a9f1d60}{Deliveryman}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_,\ \textcolor{keywordtype}{int}\ salary\_);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deliveryman_a825c415e345a1e702c689aa4f9b3c67f}{addLetter}}(\mbox{\hyperlink{class_letter}{Letter}}\ letter);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deliveryman_ab22ca4694c78c89ac8c8e8529970d85d}{addParcel}}(\mbox{\hyperlink{class_parcel}{Parcel}}\ parcel);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_deliveryman_af143c73d6e429ad92d81b0389e838ad4}{getPackageInStock}}();}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

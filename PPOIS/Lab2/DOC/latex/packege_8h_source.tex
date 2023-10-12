@@ -1,0 +1,31 @@
+\doxysection{packege.\+h}
+\hypertarget{packege_8h_source}{}\label{packege_8h_source}\index{/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab2/inc/packege.h@{/Users/user/Desktop/УНИК/BSUIR/PPOIS/Lab2/inc/packege.h}}
+\mbox{\hyperlink{packege_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{customer_8h}{customer.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{delivery__address_8h}{delivery\_address.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_package}{Package}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_package_afc30e34cdf53cc411c93c291af1a7080}{Package}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ sender\_,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ recipient\_,\ \textcolor{keywordtype}{double}\ weight\_,\ \textcolor{keyword}{const}\ std::string\ \&location\_);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{class_package_ada146cc42c609713ab82a039f73b061e}{location}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_package_a1377f4b3bf20f4a506017d6820a81939}{onPostOffice}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ \mbox{\hyperlink{class_package_ac89e750ac00907cb0fc8ac29b8eabe23}{sender}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ \mbox{\hyperlink{class_package_aa5899858e56246fe33024ac94c5b5a1b}{recipient}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_package_a4cb0a2b601b45e4552ba4d3e2a8fe756}{weight}};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_delivery_address}{DeliveryAddress}}\ \mbox{\hyperlink{class_package_a365782b69352f96176d219442a0c9c6d}{address}};}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{class_package_a59106666b30824dcee2e016cfabaff63}{getLocation}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_package_aac3bc0b69da27a1bf8f5a04ef042609c}{setLocation}}(\textcolor{keyword}{const}\ std::string\ \&location\_);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_package_aa40d063c2b8b8e46ff0e9b582c6da8f3}{setOnPostOffice}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_package_add959a3c51cc2b8aded13c2e118970e0}{getOnPostOffice}}();}
+\DoxyCodeLine{00058\ \};}
+
+\end{DoxyCode}

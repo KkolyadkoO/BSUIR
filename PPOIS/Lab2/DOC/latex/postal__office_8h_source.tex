@@ -6,139 +6,40 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_delivery_address}{DeliveryAddress}}}
-\DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00013\ \ \ \ \ std::string\ \mbox{\hyperlink{class_delivery_address_a3fcf3df0a375228eac986be69063117a}{postcode}};}
-\DoxyCodeLine{00014\ \ \ \ \ std::string\ \mbox{\hyperlink{class_delivery_address_a0c564f461de0c6e869f33ae2c95faca3}{address}};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_delivery_address_a987a520d54a89648ef3ca466dc5f1cea}{setDeliveryAddress}}(\textcolor{keyword}{const}\ std::string\ \&postcode\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_);}
-\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_delivery_address_a704f1d171d0529aee025ad2047100ec0}{getPostcode}}();}
-\DoxyCodeLine{00035\ \ \ \ \ std::string\ \mbox{\hyperlink{class_delivery_address_a39dbdf9c65853f484a93ccf8e8b08aac}{getAddress}}();}
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_person}{Person}}}
-\DoxyCodeLine{00042\ \{}
-\DoxyCodeLine{00043\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_person_a41387fea29b65ee144bab876dc8b800e}{Person}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00055\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a7594663aadc0de77616506df8a2f4128}{name}};}
-\DoxyCodeLine{00056\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a348696c2c3209c6740f7c07d1ff6ebd8}{address}};}
-\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a43b23a51d316a3c3c97d2d08544b8225}{phoneNumber}};}
-\DoxyCodeLine{00058\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a7907ea629f0416e2db2a0c65ccccd7b7}{mail}};}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_a14399bc5df4b76c8dcc606ab0ab892bb}{displayInfo}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00071\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a9c7e71b74d9b97a16dbe5610efbd4344}{getAddress}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00077\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_ab20f096fdfd5201818c45754af4c3e3b}{getName}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00083\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a833199083b16bc1db396e599c9b0f77a}{getPhoneNumer}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00089\ \ \ \ \ std::string\ \mbox{\hyperlink{class_person_a88755f2665381b9d4e1f966d8d52181b}{getMail}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00090\ \};}
-\DoxyCodeLine{00095\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_customer}{Customer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_person}{Person}}}
-\DoxyCodeLine{00096\ \{}
-\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_customer_a7cee0bf4cede27ec0c05f4222f7a93a0}{clientID}};}
-\DoxyCodeLine{00099\ \ \ \ \ std::string\ \mbox{\hyperlink{class_customer_a2a942eeeadde0ab5f26c830b60b23e07}{postcode}};}
-\DoxyCodeLine{00100\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_customer_af8c395910982d3c63dd67f4cde1cf96c}{Customer}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_,\ \textcolor{keywordtype}{int}\ clientID\_,\ \textcolor{keyword}{const}\ std::string\ postcode\_);}
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_customer_a18422aa86206ee05dbe8945a8ede7fdd}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_customer_aed669f20f5a6b4ad409dcdc768019d10}{getClientID}}();}
-\DoxyCodeLine{00128\ \ \ \ \ std::string\ \mbox{\hyperlink{class_customer_ab0ba547c95e0a90514bf8ee42c65f06f}{getPostcode}}();}
-\DoxyCodeLine{00129\ \};}
-\DoxyCodeLine{00134\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_post_man}{PostMan}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_person}{Person}}}
-\DoxyCodeLine{00135\ \{}
-\DoxyCodeLine{00136\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_post_man_a4315716f1ddafc9217e95b5ecca4e120}{salary}};}
-\DoxyCodeLine{00138\ }
-\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_post_man_a0864faac6f53145993ffc9dc0a64ff3f}{PostMan}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_,\ \textcolor{keywordtype}{int}\ salary\_);}
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_man_af6729fb7e9738813a619346f3519d1fb}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_post_man_ae8c45e25615911b0b4e48a89e8446f37}{getSalary}}();}
-\DoxyCodeLine{00161\ \};}
-\DoxyCodeLine{00166\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_package}{Package}}}
-\DoxyCodeLine{00167\ \{}
-\DoxyCodeLine{00168\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{class_package_afc30e34cdf53cc411c93c291af1a7080}{Package}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ sender\_,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ recipient\_,\ \textcolor{keywordtype}{double}\ weight\_,\ \textcolor{keyword}{const}\ std::string\ \&location\_);}
-\DoxyCodeLine{00178\ }
-\DoxyCodeLine{00179\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00180\ \ \ \ \ std::string\ \mbox{\hyperlink{class_package_ada146cc42c609713ab82a039f73b061e}{location}};}
-\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_package_a1377f4b3bf20f4a506017d6820a81939}{onPostOffice}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ \mbox{\hyperlink{class_package_ac89e750ac00907cb0fc8ac29b8eabe23}{sender}};}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_customer}{Customer}}\ \mbox{\hyperlink{class_package_aa5899858e56246fe33024ac94c5b5a1b}{recipient}};}
-\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_package_a4cb0a2b601b45e4552ba4d3e2a8fe756}{weight}};}
-\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{class_delivery_address}{DeliveryAddress}}\ \mbox{\hyperlink{class_package_a365782b69352f96176d219442a0c9c6d}{address}};}
-\DoxyCodeLine{00193\ \ \ \ \ std::string\ \mbox{\hyperlink{class_package_a59106666b30824dcee2e016cfabaff63}{getLocation}}();}
-\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_package_aac3bc0b69da27a1bf8f5a04ef042609c}{setLocation}}(\textcolor{keyword}{const}\ std::string\ \&location\_);}
-\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_package_aa40d063c2b8b8e46ff0e9b582c6da8f3}{setOnPostOffice}}(\textcolor{keywordtype}{bool}\ value);}
-\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_package_add959a3c51cc2b8aded13c2e118970e0}{getOnPostOffice}}();}
-\DoxyCodeLine{00213\ \};}
-\DoxyCodeLine{00218\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_letter}{Letter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_package}{Package}}}
-\DoxyCodeLine{00219\ \{}
-\DoxyCodeLine{00220\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{class_letter_a4272500779a30d59366a57ade9096510}{letterText}};}
-\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{class_letter_a45ed0f9315ffdd268b0041c5c23e432e}{Letter}}(\mbox{\hyperlink{class_customer}{Customer}}\ sender\_,\ \mbox{\hyperlink{class_customer}{Customer}}\ recipient\_,\ \textcolor{keywordtype}{double}\ weight\_,\ \textcolor{keyword}{const}\ std::string\ \&location\_,\ \textcolor{keyword}{const}\ std::string\ \&letterText\_);}
-\DoxyCodeLine{00232\ \};}
-\DoxyCodeLine{00237\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_parcel}{Parcel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_package}{Package}}}
-\DoxyCodeLine{00238\ \{}
-\DoxyCodeLine{00239\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_parcel_ace29923107728e8f2a7d53407072476a}{length}};}
-\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_parcel_a53c7631d7581fb688088b326159b8e54}{width}};}
-\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_parcel_a33bfd43687a813d96d8ee81f30a8a5dd}{height}};}
-\DoxyCodeLine{00243\ }
-\DoxyCodeLine{00244\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00256\ \ \ \ \ \mbox{\hyperlink{class_parcel_a70cad3ffdc4e545ec85284395e909ef8}{Parcel}}(\mbox{\hyperlink{class_customer}{Customer}}\ sender\_,\ \mbox{\hyperlink{class_customer}{Customer}}\ recipient\_,\ \textcolor{keywordtype}{double}\ weight\_,\ \textcolor{keyword}{const}\ std::string\ \&location\_,\ \textcolor{keywordtype}{double}\ length\_,\ \textcolor{keywordtype}{double}\ width\_,\ \textcolor{keywordtype}{double}\ height\_);}
-\DoxyCodeLine{00257\ \};}
-\DoxyCodeLine{00262\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sorter}{Sorter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_post_man}{PostMan}}}
-\DoxyCodeLine{00263\ \{}
-\DoxyCodeLine{00264\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00274\ \ \ \ \ \mbox{\hyperlink{class_sorter_a280cffd43cebd6fe83b687d09f5da223}{Sorter}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_,\ \textcolor{keywordtype}{int}\ salary\_);}
-\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sorter_ad63baa163fd36bf9e99cb9f437dd849d}{sortPackage}}(std::vector<Letter>\ \&letters,\ std::vector<Parcel>\ \&parcels,\ std::string\ postOfficeAddress);}
-\DoxyCodeLine{00283\ \};}
-\DoxyCodeLine{00288\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_deliveryman}{Deliveryman}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_post_man}{PostMan}}}
-\DoxyCodeLine{00289\ \{}
-\DoxyCodeLine{00290\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00291\ \ \ \ \ std::vector<Letter>\ \mbox{\hyperlink{class_deliveryman_a481f7b8e8a12a238a3e369f908135e84}{lettersInStock}};}
-\DoxyCodeLine{00292\ \ \ \ \ std::vector<Parcel>\ \mbox{\hyperlink{class_deliveryman_ac7b94b4213446ca2aae4283732559dca}{parcelInStock}};}
-\DoxyCodeLine{00293\ }
-\DoxyCodeLine{00294\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{class_deliveryman_a5ddfeddd4e743aae43a694226a9f1d60}{Deliveryman}}(\textcolor{keyword}{const}\ std::string\ \&name\_,\ \textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&phoneNumber\_,\ \textcolor{keyword}{const}\ std::string\ \&mail\_,\ \textcolor{keywordtype}{int}\ salary\_);}
-\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deliveryman_a825c415e345a1e702c689aa4f9b3c67f}{addLetter}}(\mbox{\hyperlink{class_letter}{Letter}}\ letter);}
-\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_deliveryman_ab22ca4694c78c89ac8c8e8529970d85d}{addParcel}}(\mbox{\hyperlink{class_parcel}{Parcel}}\ parcel);}
-\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_deliveryman_af143c73d6e429ad92d81b0389e838ad4}{getPackageInStock}}();}
-\DoxyCodeLine{00323\ \};}
-\DoxyCodeLine{00328\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_postal_office}{PostalOffice}}}
-\DoxyCodeLine{00329\ \{}
-\DoxyCodeLine{00330\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00331\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_afcb4b92b81aa4736485d47b77061e55d}{address}};}
-\DoxyCodeLine{00332\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_a32e8c736fe6972e69c4503c4f1e4ea14}{openingHours}};}
-\DoxyCodeLine{00333\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_a388662f77b5ae077788d6248f1f8811c}{service}};}
-\DoxyCodeLine{00334\ \ \ \ \ std::vector<Customer>\ \mbox{\hyperlink{class_postal_office_add8fbf0e098e5d108f06fa27a40eaf27}{clients}};}
-\DoxyCodeLine{00335\ \ \ \ \ std::vector<Sorter>\ \mbox{\hyperlink{class_postal_office_a396fb140727c4e91d955f2804fedaeb1}{sorters}};}
-\DoxyCodeLine{00336\ \ \ \ \ std::vector<Deliveryman>\ \mbox{\hyperlink{class_postal_office_a8b3bf500839b980cbdb050e40d8974d9}{deliverymans}};}
-\DoxyCodeLine{00337\ \ \ \ \ std::vector<Letter>\ \mbox{\hyperlink{class_postal_office_ad789a68f8554ea404e89e3ac708a77bf}{letters}};}
-\DoxyCodeLine{00338\ \ \ \ \ std::vector<Parcel>\ \mbox{\hyperlink{class_postal_office_a0b5314a8f7643eb2107675a89490c37e}{parcels}};}
-\DoxyCodeLine{00339\ }
-\DoxyCodeLine{00340\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00348\ \ \ \ \ \mbox{\hyperlink{class_postal_office_a581347cb9aed6634503c24b662e85609}{PostalOffice}}(\textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&openingHours\_,\ \textcolor{keyword}{const}\ std::string\ \&service\_);}
-\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_ae33fd61efc8e55160429eaf6d8f6f5e0}{displayInfo}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00359\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_af08c0063cf859677fe3316cc260e40f7}{getAddress}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00365\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_acdfe990f5338679d71162a0039e73200}{getOpeningHours}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00371\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_ae868c9e6db2e60f2f4001d93b5afae33}{getService}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_ae41a0e53378b94c5d6e39de85fa1147f}{loadClients}}(std::ifstream\ \&fileDate);}
-\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_af780ce78f5f8070aa65cf99046157002}{showClients}}();}
-\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a7f8eb0437134ab9edd40bc89d947f853}{loadPostmans}}(std::ifstream\ \&fileDate);}
-\DoxyCodeLine{00393\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a3af8104b57481ef041bde88a6e2cd204}{showPostmans}}();}
-\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_afb62a641968d3b597a1a67095657b391}{loadLetter}}(std::ifstream\ \&fileDate);}
-\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_af4a2609a85f9b32c956b16de39064ab0}{loadParcel}}(std::ifstream\ \&fileDate);}
-\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a0697b4906b73b1e0ea3ced991c343295}{sortPackage}}();}
-\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a986529cc727141f3caf7dad303740d85}{loadDate}}(std::string\ filename);}
-\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a3c558d3ee5517cfe59110f7d4fb108e7}{getNumberOfClients}}();}
-\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a2b203d4b5c9c9fc14e676590dbc894cb}{getNumberOfPostmans}}();}
-\DoxyCodeLine{00434\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a41dd7d242e00a0cb44fb5c434f4ca057}{getPackageInStock}}();}
-\DoxyCodeLine{00435\ \};}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{customer_8h}{customer.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sorter_8h}{sorter.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{deliveryman_8h}{deliveryman.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{letter_8h}{letter.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parcel_8h}{parcel.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_postal_office}{PostalOffice}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_afcb4b92b81aa4736485d47b77061e55d}{address}};}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_a32e8c736fe6972e69c4503c4f1e4ea14}{openingHours}};}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_a388662f77b5ae077788d6248f1f8811c}{service}};}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<Customer>\ \mbox{\hyperlink{class_postal_office_add8fbf0e098e5d108f06fa27a40eaf27}{clients}};}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<Sorter>\ \mbox{\hyperlink{class_postal_office_a396fb140727c4e91d955f2804fedaeb1}{sorters}};}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Deliveryman>\ \mbox{\hyperlink{class_postal_office_a8b3bf500839b980cbdb050e40d8974d9}{deliverymans}};}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Letter>\ \mbox{\hyperlink{class_postal_office_ad789a68f8554ea404e89e3ac708a77bf}{letters}};}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<Parcel>\ \mbox{\hyperlink{class_postal_office_a0b5314a8f7643eb2107675a89490c37e}{parcels}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_postal_office_a581347cb9aed6634503c24b662e85609}{PostalOffice}}(\textcolor{keyword}{const}\ std::string\ \&address\_,\ \textcolor{keyword}{const}\ std::string\ \&openingHours\_,\ \textcolor{keyword}{const}\ std::string\ \&service\_);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_ae33fd61efc8e55160429eaf6d8f6f5e0}{displayInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_af08c0063cf859677fe3316cc260e40f7}{getAddress}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_acdfe990f5338679d71162a0039e73200}{getOpeningHours}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{class_postal_office_ae868c9e6db2e60f2f4001d93b5afae33}{getService}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_ae41a0e53378b94c5d6e39de85fa1147f}{loadClients}}(std::ifstream\ \&fileDate);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_af780ce78f5f8070aa65cf99046157002}{showClients}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a7f8eb0437134ab9edd40bc89d947f853}{loadPostmans}}(std::ifstream\ \&fileDate);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a3af8104b57481ef041bde88a6e2cd204}{showPostmans}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_afb62a641968d3b597a1a67095657b391}{loadLetter}}(std::ifstream\ \&fileDate);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_af4a2609a85f9b32c956b16de39064ab0}{loadParcel}}(std::ifstream\ \&fileDate);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a0697b4906b73b1e0ea3ced991c343295}{sortPackage}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_postal_office_a986529cc727141f3caf7dad303740d85}{loadDate}}(std::string\ filename);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a3c558d3ee5517cfe59110f7d4fb108e7}{getNumberOfClients}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a2b203d4b5c9c9fc14e676590dbc894cb}{getNumberOfPostmans}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_postal_office_a41dd7d242e00a0cb44fb5c434f4ca057}{getPackageInStock}}();}
+\DoxyCodeLine{00121\ \};}
 
 \end{DoxyCode}

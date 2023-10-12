@@ -11,7 +11,7 @@ var searchData=
   ['getopeninghours_8',['getOpeningHours',['../class_postal_office.html#acdfe990f5338679d71162a0039e73200',1,'PostalOffice']]],
   ['getpackageinstock_9',['getpackageinstock',['../class_deliveryman.html#af143c73d6e429ad92d81b0389e838ad4',1,'Deliveryman::getPackageInStock()'],['../class_postal_office.html#a41dd7d242e00a0cb44fb5c434f4ca057',1,'PostalOffice::getPackageInStock()']]],
   ['getphonenumer_10',['getPhoneNumer',['../class_person.html#a833199083b16bc1db396e599c9b0f77a',1,'Person']]],
-  ['getpostcode_11',['getpostcode',['../class_delivery_address.html#a704f1d171d0529aee025ad2047100ec0',1,'DeliveryAddress::getPostcode()'],['../class_customer.html#ab0ba547c95e0a90514bf8ee42c65f06f',1,'Customer::getPostcode()']]],
+  ['getpostcode_11',['getpostcode',['../class_customer.html#ab0ba547c95e0a90514bf8ee42c65f06f',1,'Customer::getPostcode()'],['../class_delivery_address.html#a704f1d171d0529aee025ad2047100ec0',1,'DeliveryAddress::getPostcode()']]],
   ['getsalary_12',['getSalary',['../class_post_man.html#ae8c45e25615911b0b4e48a89e8446f37',1,'PostMan']]],
   ['getservice_13',['getService',['../class_postal_office.html#ae868c9e6db2e60f2f4001d93b5afae33',1,'PostalOffice']]]
 ];
