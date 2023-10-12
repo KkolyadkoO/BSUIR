@@ -1,6 +1,15 @@
 #include <gtest/gtest.h>
 #include <sstream>
+#include "../inc/customer.h"
+#include "../inc/postman.h"
+#include "../inc/delivery_address.h"
+#include "../inc/packege.h"
+#include "../inc/letter.h"
+#include "../inc/parcel.h"
+#include "../inc/sorter.h"
+#include "../inc/deliveryman.h"
 #include "../inc/postal_office.h"
+
 
 TEST(POST_Test, PostalOfficeConstruct)
 {
@@ -57,6 +66,7 @@ TEST(POST_Test, ParcelFun)
   Parcel parcel(sender, recipient, 100.2, "China", 10.2, 13, 45);
   EXPECT_DOUBLE_EQ(parcel.weight, 100.2);
   EXPECT_TRUE(parcel.getLocation() == "China");
+  EXPECT_EQ(parcel.getLocation(), "China");
   parcel.setLocation("Belarus");
   EXPECT_TRUE(parcel.getLocation() == "Belarus");
   parcel.setOnPostOffice(false);
