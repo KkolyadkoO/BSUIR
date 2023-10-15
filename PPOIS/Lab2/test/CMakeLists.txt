@@ -14,17 +14,9 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 file(GLOB_RECURSE SRC_FILES
-    ../src/customer.cpp
-    ../src/delivery_address.cpp
-    ../src/deliveryman.cpp
-    ../src/letter.cpp
-    ../src/packege.cpp
-    ../src/parcel.cpp
-    ../src/person.cpp
-    ../src/postal_office.cpp
-    ../src/postman.cpp
-    ../src/sorter.cpp
+  ${PROJECT_SOURCE_DIR}/../src/*.cpp
 )
+list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/../src/main.cpp)
 enable_testing()
 
 add_executable(
