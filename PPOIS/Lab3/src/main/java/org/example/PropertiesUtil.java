@@ -12,12 +12,24 @@ public final class PropertiesUtil {
         loadProperties();
     }
 
+    /**
+     * constructor
+     */
     private PropertiesUtil() {
     }
 
+    /**
+     *
+     * @param key id key for one of the database properties
+     * @return one of the database properties according to the passed key
+     */
     public static String get(String key){
         return PROPERTIES.getProperty(key);
     }
+
+    /**
+     * Loads database properties from the application.properties file
+     */
     private static void loadProperties() {
         try (var inputStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("application.properties")) {
             PROPERTIES.load(inputStream);
