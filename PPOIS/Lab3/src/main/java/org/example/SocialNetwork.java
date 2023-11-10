@@ -118,7 +118,7 @@ public class SocialNetwork {
      * @param chat_id id of chat
      * @return chat number in the list
      */
-    private int findPersonalChatById(Long chat_id) {
+    private int findNumberPersonalChatById(Long chat_id) {
         int cout = 0;
         for (PersonalСhat personalСhat : personalСhats) {
             if (personalСhat.getChat_id().equals(chat_id))
@@ -135,10 +135,10 @@ public class SocialNetwork {
      * @param sender_id id of customer
      */
     public void addPersonalMessage(Long chat_id, String text, Long sender_id) {
-        if (Objects.equals(personalСhats.get(findPersonalChatById(chat_id)).getFirstMember_id(), sender_id) || Objects.equals(personalСhats.get(findPersonalChatById(chat_id)).getSecondMember_id(), sender_id)) {
+        if (Objects.equals(personalСhats.get(findNumberPersonalChatById(chat_id)).getFirstMember_id(), sender_id) || Objects.equals(personalСhats.get(findNumberPersonalChatById(chat_id)).getSecondMember_id(), sender_id)) {
             Message message = new Message(text, new Timestamp(System.currentTimeMillis()), sender_id);
             db.addPersonalMessage(chat_id, message);
-            this.personalСhats.get(findPersonalChatById(chat_id)).addMessage(message);
+            this.personalСhats.get(findNumberPersonalChatById(chat_id)).addMessage(message);
         }
     }
 
@@ -147,7 +147,7 @@ public class SocialNetwork {
      * @param chat_id id of chat
      * @return chat number in the list
      */
-    private int findGroupChatById(Long chat_id) {
+    private int findNumberGroupChatById(Long chat_id) {
         int cout = 0;
         for (GroupChat groupChat : groupChats) {
             if (groupChat.getChat_id().equals(chat_id))
@@ -164,7 +164,7 @@ public class SocialNetwork {
      * @return true of false
      */
     private boolean isMemberInGroupChat(Long chat_id, Long sender_id) {
-        for (Long members_id : groupChats.get(findGroupChatById(chat_id)).getMembers_id()) {
+        for (Long members_id : groupChats.get(findNumberGroupChatById(chat_id)).getMembers_id()) {
             if (sender_id.equals(members_id))
                 return true;
         }
@@ -181,7 +181,7 @@ public class SocialNetwork {
         if (isMemberInGroupChat(chat_id, sender_id)) {
             Message message = new Message(text, new Timestamp(System.currentTimeMillis()), sender_id);
             db.addGroupMessage(chat_id, message);
-            this.groupChats.get(findGroupChatById(chat_id)).addMessage(message);
+            this.groupChats.get(findNumberGroupChatById(chat_id)).addMessage(message);
         }
     }
 
@@ -214,7 +214,7 @@ public class SocialNetwork {
      */
     public void deleteGroupChat(Long chat_id) {
         db.deleteGroupChat(chat_id);
-        groupChats.remove(findGroupChatById(chat_id));
+        groupChats.remove(findNumberGroupChatById(chat_id));
     }
 
     /**
@@ -223,7 +223,7 @@ public class SocialNetwork {
      */
     public void deletePersonalChat(Long chat_id) {
         db.deletePersonalChat(chat_id);
-        personalСhats.remove(findPersonalChatById(chat_id));
+        personalСhats.remove(findNumberPersonalChatById(chat_id));
     }
 
     /**
@@ -235,7 +235,7 @@ public class SocialNetwork {
      */
     private int findPersonalMessage(Long chat_id, String text, Long sender_id) {
         int count = 0;
-        for (Message message : personalСhats.get(findPersonalChatById(chat_id)).getMessages()) {
+        for (Message message : personalСhats.get(findNumberPersonalChatById(chat_id)).getMessages()) {
             if (Objects.equals(message.getText(), text) && Objects.equals(message.getSender_id(), sender_id)) {
                 return count;
             }
@@ -253,7 +253,7 @@ public class SocialNetwork {
      */
     private int findGroupMessage(Long chat_id, String text, Long sender_id) {
         int count = 0;
-        for (Message message : groupChats.get(findGroupChatById(chat_id)).getMessages()) {
+        for (Message message : groupChats.get(findNumberGroupChatById(chat_id)).getMessages()) {
             if (Objects.equals(message.getText(), text) && Objects.equals(message.getSender_id(), sender_id)) {
                 return count;
             }
@@ -270,8 +270,8 @@ public class SocialNetwork {
      * @param sender_id id of customer
      */
     public void deletePersonalMessage(Long chat_id, String text, Long sender_id) {
-        db.deletePersonalMessage(chat_id, personalСhats.get(findPersonalChatById(chat_id)).getMessages().get(findPersonalMessage(chat_id,text,sender_id)));
-        personalСhats.get(findPersonalChatById(chat_id)).getMessages().remove(findPersonalMessage(chat_id,text,sender_id));
+        db.deletePersonalMessage(chat_id, personalСhats.get(findNumberPersonalChatById(chat_id)).getMessages().get(findPersonalMessage(chat_id,text,sender_id)));
+        personalСhats.get(findNumberPersonalChatById(chat_id)).getMessages().remove(findPersonalMessage(chat_id,text,sender_id));
     }
 
     /**
@@ -281,7 +281,7 @@ public class SocialNetwork {
      * @param sender_id id of customer
      */
     public void deleteGroupMessage(Long chat_id, String text, Long sender_id) {
-        db.deleteGroupMessage(chat_id, groupChats.get(findGroupChatById(chat_id)).getMessages().get(findGroupMessage(chat_id,text,sender_id)));
-        groupChats.get(findGroupChatById(chat_id)).getMessages().remove(findGroupMessage(chat_id,text,sender_id));
+        db.deleteGroupMessage(chat_id, groupChats.get(findNumberGroupChatById(chat_id)).getMessages().get(findGroupMessage(chat_id,text,sender_id)));
+        groupChats.get(findNumberGroupChatById(chat_id)).getMessages().remove(findGroupMessage(chat_id,text,sender_id));
     }
 }

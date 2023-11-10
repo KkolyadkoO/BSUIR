@@ -15,8 +15,13 @@ public class PersonalСhat extends Chat {
      */
     public PersonalСhat(Long chatId, Long firstMember, Long secondMember) {
         super(chatId);
-        firstMember_id = firstMember;
-        secondMember_id = secondMember;
+        if (firstMember<secondMember){
+            firstMember_id = firstMember;
+            secondMember_id = secondMember;}
+        else {
+            firstMember_id = secondMember;
+            secondMember_id = firstMember;
+        }
     }
 
     /**
@@ -25,13 +30,7 @@ public class PersonalСhat extends Chat {
      * @param secondMember id of second member
      */
     public PersonalСhat( Long firstMember, Long secondMember){
-        if (firstMember<secondMember){
-        firstMember_id = firstMember;
-        secondMember_id = secondMember;}
-        else {
-            firstMember_id = secondMember;
-            secondMember_id = firstMember;
-        }
+        this(0L,firstMember,secondMember);
     }
 
     /**
