@@ -1,0 +1,84 @@
+section_bakery_bakeries
+    -> potato_and_mushroom_bun;
+    -> potato_puff;
+    -> potato_and_mushroom_puff;
+    -> strawberry_puff;
+    -> meat_mushroom_potato_pie;
+    -> raspberry_puff;;
+
+potato_and_mushroom_bun
+    => nrel_main_idtf: [Пирожок с картошкой и грибами] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_potato;
+        filling_mushrooms;
+    => nrel_weight: weight_50;
+    => nrel_type: type_bun;
+    => nrel_country_of_origin: country_Russia;
+
+    <- concept_bakery;;
+
+potato_puff
+    => nrel_main_idtf: [Слойка с картошкой] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_potato;
+    => nrel_weight: weight_45;
+    => nrel_type: type_puff;
+    => nrel_country_of_origin: country_France;
+
+    <- concept_bakery;;
+
+potato_and_mushroom_puff
+    => nrel_main_idtf: [Слойка с картошкой и грибами] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_potato;
+        filling_mushrooms;
+    => nrel_weight: weight_50;
+    => nrel_type: type_puff;
+    => nrel_country_of_origin: country_France;
+
+    <- concept_bakery;;
+
+meat_mushroom_potato_pie
+    => nrel_main_idtf: [Пирог с мясом, грибами и картошкой] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_potato;
+        filling_mushrooms;
+        filling_meat;
+    => nrel_weight: weight_1500;
+    => nrel_type: type_pie;
+    => nrel_country_of_origin: country_Itali;
+
+    <- concept_pie;
+    <- concept_bakery;;
+
+strawberry_raspberry_pie
+    => nrel_main_idtf: [Пирог с клубникой и малиной] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_raspberry;
+        filling_strawberry;
+    => nrel_weight: weight_1_kg;
+    => nrel_type: type_pie;
+    => nrel_country_of_origin: country_Itali;
+
+    <- concept_pie;
+    <- concept_bakery;;
+
+strawberry_puff
+    => nrel_main_idtf: [Слойка с клубникой] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_strawberry;
+    => nrel_weight: weight_45;
+    => nrel_type: type_puff;
+    => nrel_country_of_origin: country_Itali;
+
+    <- concept_bakery;;
+
+raspberry_puff
+    => nrel_main_idtf: [Слойка с малиной] (* <- lang_ru;; *);
+    => nrel_fillings:
+        filling_raspberry;
+    => nrel_weight: weight_45;
+    => nrel_type: type_puff;
+    => nrel_country_of_origin: country_Russia;
+
+    <- concept_bakery;;

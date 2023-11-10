@@ -1,0 +1,24 @@
+
+filling_cherry => nrel_main_idtf: [Вишня] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_strawberry => nrel_main_idtf: [Клубника] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_condensed_milk => nrel_main_idtf: [Слущенка] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_raspberry => nrel_main_idtf: [Малина] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_peach => nrel_main_idtf: [Персик] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_potato => nrel_main_idtf: [Картошка] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_mushrooms => nrel_main_idtf: [Грибы] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_cheese => nrel_main_idtf: [Сыр] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_sausage => nrel_main_idtf: [Сосиска] (* <- lang_ru;; *);
+<- concept_filling;;
+filling_meat => nrel_main_idtf: [Мясо] (* <- lang_ru;; *);
+<- concept_filling;;
+
+nrel_filling
+    => nrel_main_idtf: [начинка*] (* <- lang_ru;; *);;

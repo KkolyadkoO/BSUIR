@@ -1,0 +1,34 @@
+type_pie
+    => nrel_main_idtf: [Пирог] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Pie] (* <- lang_en;; *);;
+
+type_bun
+    => nrel_main_idtf: [Булочка] (* <- lang_ru;; *);
+    => nrel_main_idtf: [bun] (* <- lang_en;; *);;
+
+type_puff
+    => nrel_main_idtf: [Слойка] (* <- lang_ru;; *);
+    => nrel_main_idtf: [puff] (* <- lang_en;; *);;
+
+type_bread
+    => nrel_main_idtf: [Хлеб] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Pie] (* <- lang_en;; *);;
+
+type_pancake
+    => nrel_main_idtf: [Блин] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Pie] (* <- lang_en;; *);;
+
+type_cake
+    => nrel_main_idtf: [Торт] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Pie] (* <- lang_en;; *);;
+
+type_donut
+    => nrel_main_idtf: [Пончик] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Pie] (* <- lang_en;; *);;
+
+type_cupcake
+    => nrel_main_idtf: [Кекс] (* <- lang_ru;; *);
+    => nrel_main_idtf: [Cupcake] (* <- lang_en;; *);;
+
+nrel_type
+    => nrel_main_idtf: [тип булочки*] (* <- lang_ru;; *);;

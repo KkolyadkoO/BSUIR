@@ -1,0 +1,134 @@
+// Section
+
+subject_domain_bakery_product_section
+	=> nrel_main_idtf: [Раздел. Предметная область выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Subject domain of bakery product] (* <- lang_en;; *);
+
+	<= nrel_section_decomposition:
+		{
+			section_bakery_bakehouse;
+			section_bakery_type;
+			section_bakery_country_of_origin;
+			section_bakery_bakeries
+		};
+
+	-> rrel_key_sc_element:
+		concept_bakery_industry;
+		concept_bakery;
+		concept_bakery_type;
+		subject_domain_bakery_product;
+		country_France;
+		lw4_patterns;
+
+	<- non_atomic_section;;
+
+// Sections
+
+section_bakery_bakehouse
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Пекарни] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Bakehouse] (* <- lang_en;; *);;
+
+section_bakery_type
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Тип выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Bakery type] (* <- lang_en;; *);;
+
+section_bakery_country_of_origin
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Страна создатель выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Bakery country of origin] (* <- lang_en;; *);;
+
+section_bakery_bakeries
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Булочка] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Bakery product] (* <- lang_en;; *);;
+
+// Key sc elements
+
+concept_bakery_industry
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Булочная-индустрия] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Bakery industry] (* <- lang_en;; *);;
+
+country_France
+    <- sc_node_not_relation;
+    => nrel_main_idtf: [Франция] (* <- lang_ru;; *);
+    => nrel_main_idtf: [France] (* <- lang_en;; *);;
+
+
+// Subject domain
+subject_domain_bakery_product_section= [*
+
+	subject_domain_bakery_product
+		<- sc_node_not_relation;
+		=> nrel_main_idtf: [Предметная область выпечки] (* <- lang_ru;; *);
+    	=> nrel_main_idtf: [Subject domain of bakery] (* <- lang_en;; *);
+
+		-> rrel_maximum_studied_object_class:
+			concept_bakery_industry;
+
+		<- rrel_not_maximum_studied_object_class:
+			concept_bakery;
+			concept_bakery_type;
+
+		-> rrel_studied_relation:
+			nrel_country_of_origin;
+
+		=> nrel_private_subject_domain:
+			subject_domain_bakery_bakehouse;
+			subject_domain_bakery_type;
+			subject_domain_bakery_country_of_origin;
+			subject_domain_bakery_bakeries;
+
+		<= nrel_private_subject_domain:
+			subject_domain_eats;
+
+		<- subject_domain;;
+
+*];;
+
+subject_domain_eats
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область еды] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of eats] (* <- lang_en;; *);;
+
+subject_domain_bakery_bakehouse
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область перней] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of bakehouse] (* <- lang_en;; *);;
+
+subject_domain_bakery_type
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область типов выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of bakery type] (* <- lang_en;; *);;
+
+subject_domain_bakery_country_of_origin
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область страны изобретателя выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of bakery country of origin] (* <- lang_en;; *);;
+
+subject_domain_bakery_bakeries
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область булочек] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of bakeries] (* <- lang_en;; *);;
+
+concept_bakery_industry
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [булочная-индустрия] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [bakery industry] (* <- lang_en;; *);;
+
+concept_bakery
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [выпечка] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [bakery] (* <- lang_en;; *);;
+
+concept_bakery_type
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [тип выпечки] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [type] (* <- lang_en;; *);;
+
+nrel_country_of_origin
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf: [страна производства*] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [country of origin*] (* <- lang_en;; *);;

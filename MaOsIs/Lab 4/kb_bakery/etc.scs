@@ -1,0 +1,32 @@
+country_Russia
+    => nrel_main_idtf: [Россия] (* <- lang_ru;; *);;
+
+country_Itali
+    => nrel_main_idtf: [Италия] (* <- lang_ru;; *);;
+
+nrel_weight
+   => nrel_main_idtf: [вес изделия*] (* <- lang_ru;; *);;
+
+weight_45
+   => nrel_main_idtf: [45 грамм](*<- lang_ru;;*);
+   -> [45];;
+
+weight_50
+
+   => nrel_main_idtf: [50 грамм](*<- lang_ru;;*);
+   -> [50];;
+
+weight_100
+
+   => nrel_main_idtf: [100 грамм](*<- lang_ru;;*);
+   -> [100];;
+
+weight_1_kg
+
+   => nrel_main_idtf: [1 кг](*<- lang_ru;;*);
+   -> [1];;
+weight_1500
+
+   => nrel_main_idtf: [1500 грамм](*<- lang_ru;;*);
+   -> [1500];;
+
