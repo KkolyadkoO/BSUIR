@@ -13,6 +13,7 @@ int main()  //Основное тело программы
 	cout << "Enter a numeric string: "; // Вывод сообщения
 	char c = getchar();
 	while (c != '\n') {
+		
 		arr[k++] = c;
 		c = getchar();
 	}
@@ -21,6 +22,21 @@ int main()  //Основное тело программы
 	for (int i = k; i >= 0; i--) {
 		if (isdigit(arr[i])) {
 			currNum += q * (arr[i] - '0');
+			switch (currNum)
+			{
+			case 1:
+				cout << "1";
+				break;
+			case 2:
+				cout << "2";
+				break;
+			case 3:
+				cout << "3";
+				break;
+			default:
+				cout << "0";
+				break;
+			}
 			q *= 10;
 		}
 		else if (q != 1) {
