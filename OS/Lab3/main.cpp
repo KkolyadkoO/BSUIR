@@ -1,122 +1,50 @@
 #include <iostream>
 #include <thread>
-#include <vector>
-#include <cmath>
-#include <fstream>
+#include <mutex>
+#include <chrono>
 
+const int NUM_PHILOSOPHERS = 5;
+std::mutex forks[NUM_PHILOSOPHERS];
+std::mutex console_mutex;
 
-#define FROM    0
-#define TO      2000000
+void philosopher(int id) {
+    int left_fork = id;
+    int right_fork = (id + 1) % NUM_PHILOSOPHERS;
 
-struct Point {
-private:
-    double _x;
-    double _y;
-    time_t _calcTime;
+    while (true) {
+        
+        // Философ размышляет
+        std::cout << "Philosopher " << id << " is thinking." << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Задержка 0.5 секунды
 
-public:
-    long writtenTime = 0;
+        // Философ голоден, пытается взять вилки
+        {
+            std::unique_lock<std::mutex> left_lock(forks[left_fork]);
+            std::unique_lock<std::mutex> right_lock(forks[right_fork]);
 
-    Point(double x, double y, time_t calcTime) {
-        this->_x = x;
-        this->_y = y;
-        this->_calcTime = calcTime;
-    }
-
-    [[nodiscard]] double x() const { return _x; }
-
-    [[nodiscard]] double y() const { return _y; }
-
-    [[nodiscard]] time_t calcTime() const { return _calcTime; }
-
-    Point& operator=(const Point&) = delete;
-};
-
-template <typename T>
-struct ConcurrentQueue {
-private:
-    std::vector<std::unique_ptr<T>> rawQueue;
-    std::mutex mutex;
-public:
-    void push(std::unique_ptr<T> ptr) {
-        mutex.lock();
-        rawQueue.emplace_back(std::move(ptr));
-        mutex.unlock();
-    }
-
-    std::unique_ptr<Point> pop() {
-        mutex.lock();
-        auto ptr = std::move(rawQueue[rawQueue.size() - 1]);
-        rawQueue.pop_back();
-        mutex.unlock();
-        return ptr;
-    }
-
-    bool empty() {
-        mutex.lock();
-        auto isEmpty = rawQueue.empty();
-        mutex.unlock();
-        return isEmpty;
-    }
-};
-
-int main(int argc, char **argv) {
-
-    ConcurrentQueue<Point> calculated, written;
-
-    auto calcFinished = false;
-    std::thread calculator([&calculated, &calcFinished]() {
-        for (int i = FROM; i < TO; i++) {
-            calculated.push(std::make_unique<Point>(i, log(i), time(nullptr)));
+            // Философ ест спагетти
+            std::cout << "Philosopher " << id << " is eating." << std::endl;
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // Задержка 1 секунда
         }
 
-        calcFinished = true;
-    });
+        // Философ освобождает вилки и начинает размышлять снова
+        std::cout << "Philosopher " << id << " has finished eating." << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Задержка 0.5 секунды
+    }
+}
 
-    auto writeFinished = false;
-    std::thread writer([&calculated, &written, &calcFinished, &writeFinished]() {
-        std::ofstream stream("output.txt");
+int main() {
+    std::thread philosophers[NUM_PHILOSOPHERS];
 
-       while (true) {
-           auto isEmpty = calculated.empty();
+    // Создаем процессы философов
+    for (int i = 0; i < NUM_PHILOSOPHERS; ++i) {
+        philosophers[i] = std::thread(philosopher, i);
+    }
 
-           if (isEmpty && calcFinished) break;
-           if (calculated.empty()) continue;
+    // Ждем завершения работы философов
+    for (int i = 0; i < NUM_PHILOSOPHERS; ++i) {
+        philosophers[i].join();
+    }
 
-           auto ptr = calculated.pop();
-           stream << "x: " << ptr->x() << ", y: " << ptr->y() << '\n';
-           ptr->writtenTime = time(nullptr);
-           written.push(std::move(ptr));
-       }
-
-       writeFinished = true;
-    });
-
-    std::thread logger([&written, &writeFinished]() {
-        std::ofstream stream("log.log");
-
-        while (true) {
-            auto isEmpty = written.empty();
-
-            if (isEmpty && writeFinished) break;
-            if (isEmpty) continue;
-
-            auto ptr = written.pop();
-            stream << "x: " << ptr->x() << ", calcTime: " << ptr->calcTime()
-                   << ", writtenTime: " << ptr->writtenTime << '\n';
-        }
-    });
-
-    std::cout << "Wait please. While waiting " << std::endl;
-
-
-    calculator.join();
-    std::cout << "Calculations finished." << std::endl;
-    writer.join();
-    std::cout << "Writing finished." << std::endl;
-    logger.join();
-    std::cout << "Logging finished." << std::endl;
-
-    std::cout << "Yay! Done :)" << std::endl;
-
+    return 0;
 }
