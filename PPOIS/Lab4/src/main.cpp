@@ -3,7 +3,7 @@
 #include <string>
 #include <iterator>
 #include <sstream>
-#include"../inc/Graph1.h"
+#include"../inc/Graph.h"
 using namespace std;
 
 int main()
@@ -13,11 +13,8 @@ int main()
     test.addNode(4);
     test.addEdge(0,0);
     test.addEdge(0,1);
-    Graph<int>::EdgeIterator it(0,test);
-    it.next();
-    it.deleteEdge();
-    pair<int,int> p = it.getValue();
-   
+    cout << test;
+    
     
     return 0;
 

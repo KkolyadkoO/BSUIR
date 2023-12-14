@@ -13,7 +13,7 @@ public:
     Node(std::string name_, T value_ = T()): value(value_), name(name_){}
     Node( T value_ = T()): value(value_){}
 
-    T getValue(){
+    T getValue() const{
         return value;
     }
 
@@ -21,7 +21,7 @@ public:
         value = value_;
     }
 
-    std::string getName(){
+    std::string getName() const{
         return name;
     }
 

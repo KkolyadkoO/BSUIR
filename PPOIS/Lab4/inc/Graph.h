@@ -125,7 +125,7 @@ public:
         return numberOfNode + 1;
     }
 
-    T getValue(int nodeNum)
+    T getValue(int nodeNum) const
     {
         if (!isNode(nodeNum))
         {
@@ -162,7 +162,7 @@ public:
             return false;
         for (size_t i = 0; i < numberOfNode + 1; i++)
         {
-            if(nodes[i].getValue() != graph.getValue[i])
+            if(nodes[i].getValue() != graph.getValue(i))
             return false;
 
             for (size_t j = 0; j < numberOfNode + 1; j++)
@@ -382,10 +382,10 @@ public:
             current = nodes[position];
         }
         bool hasNext(){
-            return (position + 1 < nodes.size() - 1);
+            return (position + 1 <= nodes.size() - 1);
         }
         bool hasPrev(){
-            return (position - 1 > 0);
+            return (position - 1 >= 0);
         }
         /**
          * @brief Get the Current iterator
@@ -419,8 +419,10 @@ public:
             NodeIteratorConst::position = temp;
         }
 
-        void setValue(const T& value){
-            NodeIteratorConst::graph.nodes[NodeIteratorConst::position].setValue(value);
+        void setValue(T value){
+            NodeIteratorConst::graph->nodes[NodeIteratorConst::position].setValue(value);
+            NodeIteratorConst::nodes[NodeIteratorConst::position].setValue(value);
+            NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position];
         }
     };
 
@@ -429,9 +431,9 @@ public:
         ReverseNodeIterator(Graph& graph):NodeIterator(graph){
             std::vector<Node<T>> temp = NodeIteratorConst::nodes;
             NodeIteratorConst::nodes.clear();
-            for (const auto& node : temp)
+            for (int  i = temp.size()-1; i >=0 ; i--)
             {
-                NodeIteratorConst::nodes.push_back(node);
+                NodeIteratorConst::nodes.push_back(temp[i]);
             }
             
         }
@@ -485,7 +487,7 @@ public:
             position--;
         }
         std::pair<T,T> getValue(){
-            std::pair<T,T> value(graph->nodes[nodeNum].getValue(),graph->nodes[position].getValue());
+            std::pair<T,T> value(graph->nodes[nodeNum].getValue(),graph->nodes[numberEdge[position]].getValue());
             return value;
         }
     };
@@ -545,3 +547,26 @@ public:
         return matrix[from][to] != 0;
     }
 };
+/**
+ * @brief operator <<
+ * 
+ * @param os 
+ * @param graph 
+ * @return std::ostream& 
+ */
+template <typename Temp>
+std::ostream &operator<<(std::ostream &os, Graph<Temp> &graph)
+{
+    for (size_t i = 0; i < graph.getNumberOfNode(); i++)
+    {
+        for (size_t j = 0; j < graph.getNumberOfNode(); j++)
+        {
+            if (graph.isEdge(i, j))
+            {
+                os << i << " -> " << j << "\n";
+            }
+        }
+    }
+
+    return os;
+}
