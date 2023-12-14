@@ -1,7 +1,3 @@
-//
-// Created by rostislav on 12/10/22.
-//
-
 #ifndef OS_LW_4_MEMORY_H
 #define OS_LW_4_MEMORY_H
 
@@ -112,4 +108,4 @@ public:
 
 };
 
-#endif //OS_LW_4_MEMORY_H
+#endif 

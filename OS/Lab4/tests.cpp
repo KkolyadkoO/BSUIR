@@ -1,6 +1,3 @@
-//
-// Created by rostislav on 12/10/22.
-//
 
 #include <gtest/gtest.h>
 #include "Memory.h"
