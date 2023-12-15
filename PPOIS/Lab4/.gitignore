@@ -1,0 +1,8 @@
+/build
+test/build
+/.vscode
+Doxyfile
+.idea
+cmake-build-debug
+test/googletest
+cmake-build-debug-coverage
