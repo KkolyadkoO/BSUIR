@@ -1,42 +1,32 @@
 ﻿#include <iostream> // Подключение стандартной библиотеки
 #include <string>
-
 using namespace std;
-
+int SolveCurrNum(int q, char arri){
+return q * (arri - '0');
+}
+char* getString(int* k){
+	char arr[1000] = { ' ' };
+	printf ("Enter a numeric string: "); // Вывод сообщения
+	char c = getchar();
+	while (c != '\n') {
+		
+		arr[*k++] = c;
+		c = getchar();
+	}
+	return arr;
+}
 int numArr[1000], cnt;
 
 int main()  //Основное тело программы
 {
-	char arr[1000] = { ' ' };
 	int currNum = 0;
-	int k = 1;
-	cout << "Enter a numeric string: "; // Вывод сообщения
-	char c = getchar();
-	while (c != '\n') {
-		
-		arr[k++] = c;
-		c = getchar();
-	}
-	cout << '\n'; // Перевод каретки
+	int k=1;
+	char* arr = getString(&k);
+	printf("\n"); // Перевод каретки
 	int q = 1;
 	for (int i = k; i >= 0; i--) {
 		if (isdigit(arr[i])) {
-			currNum += q * (arr[i] - '0');
-			switch (currNum)
-			{
-			case 1:
-				cout << "1";
-				break;
-			case 2:
-				cout << "2";
-				break;
-			case 3:
-				cout << "3";
-				break;
-			default:
-				cout << "0";
-				break;
-			}
+			currNum += SolveCurrNum(q, arr[i]);
 			q *= 10;
 		}
 		else if (q != 1) {
@@ -46,5 +36,3 @@ int main()  //Основное тело программы
 		}
 	}
 }
-
-
