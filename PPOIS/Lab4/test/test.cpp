@@ -41,12 +41,12 @@ TEST(GRAPH_Test, AdjacentIterator)
   test.addEdge(0,1);
   Graph<int>::NodeAdjacentIterator it(0,test);
   it.begin();
-  EXPECT_TRUE(it.getCurrent().getValue() == 5);
-  it.next();
   EXPECT_TRUE(it.getCurrent().getValue() == 4);
+  it.next();
+  EXPECT_TRUE(it.getCurrent().getValue() == 3);
   it.back();
-  EXPECT_TRUE(it.getCurrent().getValue() == 5);
-  it+2;
+  EXPECT_TRUE(it.getCurrent().getValue() == 4);
+  it+1;
   EXPECT_TRUE(it.getCurrent().getValue() == 3);
   it-1;
   EXPECT_TRUE(it.getCurrent().getValue() == 4);
@@ -128,7 +128,7 @@ TEST(GRAPH_Test, RNodeIterator)
   EXPECT_TRUE(it.getCurrent().getValue() == 3);
 }
 
-TEST(GRAPH_Test, EdgeIteratorConst)
+TEST(GRAPH_Test, AdjacentEdgeIteratorConst)
 {
   Graph<int> test;
   test.addNode(5);
@@ -136,7 +136,7 @@ TEST(GRAPH_Test, EdgeIteratorConst)
   test.addNode(3);
   test.addEdge(0,1);
   test.addEdge(0,2);
-  Graph<int>::EdgeIteratorConst it(0, test);
+  Graph<int>::AdjacentEdgeIteratorConst it(0, test);
   EXPECT_TRUE(it.hasNext());
   EXPECT_FALSE(it.hasPrev());
   it.next();

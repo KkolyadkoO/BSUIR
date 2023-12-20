@@ -8,15 +8,8 @@ template <typename T>
 class Node{
 private:
     T value;
-    std::string name;
 public:
-    /**
-     * @brief Construct a new Node object
-     * 
-     * @param name_ name
-     * @param value_ value
-     */
-    Node(std::string name_, T value_ = T()): value(value_), name(name_){}
+
     /**
      * @brief Construct a new Node object without name
      * 
@@ -42,14 +35,7 @@ public:
         value = value_;
     }
 
-    /**
-     * @brief Get the Name object
-     * 
-     * @return std::string 
-     */
-    std::string getName() const{
-        return name;
-    }
+
 
     /**
      * @brief operator ==
@@ -59,7 +45,7 @@ public:
      * @return false 
      */
     bool operator==(const Node &node){
-        return node.value == value && node.name == name ? true : false;
+        return node.value == value;
     }
     /**
      * @brief operator !=
@@ -69,16 +55,9 @@ public:
      * @return false 
      */
     bool operator!=(const Node &node){
-        return node.value == value && node.name == name ? false : true;
+        return node.value != value;
     }
-    /**
-     * @brief Set the Name object
-     * 
-     * @param name_ 
-     */
-    void setName(std::string name_){
-        name = name_;
-    }
+
 
 
 };

@@ -1,13 +1,13 @@
 #pragma once
+
 #include <iostream>
 #include <vector>
 #include <iterator>
 #include "Node.h"
 
-template <typename T>
+template<typename T>
 
-class Graph
-{
+class Graph {
 
 public:
     typedef std::vector<int> NodeList;
@@ -19,19 +19,17 @@ private:
     int numberOfNode = -1;
     int numberOfEdge = 0;
 public:
-    Graph(){}  
+    Graph() {}
 
     /**
      * add new node
      * @param value value
      */
-    void addNode(T value)
-    {
+    void addNode(T value) {
         Node<T> temp(value);
         nodes.push_back(temp);
         numberOfNode++;
-        for (auto &node : matrix)
-        {
+        for (auto &node : matrix) {
             node.push_back(0);
         }
         matrix.push_back(NodeList(numberOfNode + 1, 0));
@@ -42,16 +40,12 @@ public:
      * @param from first node
      * @param to second node
      */
-    void addEdge(int from, int to)
-    {
-        if(isNode(from) && isNode(to) && !isEdge(from, to))
-        {
+    void addEdge(int from, int to) {
+        if (isNode(from) && isNode(to) && !isEdge(from, to)) {
             numberOfEdge++;
             matrix[from][to] = 1;
-        }
-        else
-        {
-            throw std::invalid_argument("edge alredy exists");
+        } else {
+            throw std::invalid_argument("edge already exists");
         }
     }
 
@@ -60,12 +54,11 @@ public:
      * @param numberNode node number
      * @param value value
      */
-     void setValue(int numberNode,const T &value)
-    {
-        if(isNode(numberNode))
+    void setValue(int numberNode, const T &value) {
+        if (isNode(numberNode))
             nodes[numberNode].setValue(value);
-        else{
-             throw std::out_of_range("no such node");
+        else {
+            throw std::out_of_range("no such node");
         }
     }
 
@@ -74,19 +67,16 @@ public:
      * @param nodeNum number of node
      * @return degree
      */
-    int getNodeDegree(int nodeNum)
-    {
-        if(isNode(nodeNum)){
-        int degree = 0;
-        for (const auto &value : matrix[nodeNum])
-        {
-            if (value != 0)
-                degree++;
-        }
-        return degree;
-        }
-        else{
-             throw std::out_of_range("no such node");
+    int getNodeDegree(int nodeNum) {
+        if (isNode(nodeNum)) {
+            int degree = 0;
+            for (const auto &value : matrix[nodeNum]) {
+                if (value != 0)
+                    degree++;
+            }
+            return degree;
+        } else {
+            throw std::out_of_range("no such node");
         }
     }
 
@@ -94,29 +84,25 @@ public:
      * delete node
      * @param nodeNum node num
      */
-    void deleteNode(int nodeNum)
-    {
-        if(isNode(nodeNum)){
-        int numberOfEdgeInThisNode = 0;
-        numberOfEdge -= getNodeDegree(nodeNum);
-        matrix.erase(matrix.begin() + nodeNum);
-        for (const auto &node : matrix)
-        {
-            if (node[nodeNum] != 0)
-                numberOfEdgeInThisNode++;
-        }
+    void deleteNode(int nodeNum) {
+        if (isNode(nodeNum)) {
+            int numberOfEdgeInThisNode = 0;
+            numberOfEdge -= getNodeDegree(nodeNum);
+            matrix.erase(matrix.begin() + nodeNum);
+            for (const auto &node : matrix) {
+                if (node[nodeNum] != 0)
+                    numberOfEdgeInThisNode++;
+            }
 
-        numberOfEdge -= numberOfEdgeInThisNode;
-        
-        for (auto &node : matrix)
-        {
-            node.erase(node.begin() + nodeNum);
-        }
-        nodes.erase(nodes.begin() + nodeNum);
-        numberOfNode--;
-        }
-        else{
-             throw std::out_of_range("no such node");
+            numberOfEdge -= numberOfEdgeInThisNode;
+
+            for (auto &node : matrix) {
+                node.erase(node.begin() + nodeNum);
+            }
+            nodes.erase(nodes.begin() + nodeNum);
+            numberOfNode--;
+        } else {
+            throw std::out_of_range("no such node");
         }
     }
 
@@ -125,31 +111,30 @@ public:
      * @param from first node
      * @param to second node
      */
-     void deleteEdge(int from, int to)
-    {
-        if(isEdge(from,to)){
-        matrix[from][to] = 0;
-        numberOfEdge--;}
-        else{
+    void deleteEdge(int from, int to) {
+        if (isEdge(from, to)) {
+            matrix[from][to] = 0;
+            numberOfEdge--;
+        } else {
             throw std::invalid_argument("no such edge");
         }
     }
+
     /**
      * @brief Get the Number Of Edge object
      *
      * @return int
      */
-    int getNumberOfEdge()
-    {
+    int getNumberOfEdge() {
         return numberOfEdge;
     }
+
     /**
      * @brief Get the Number Of Node object
      *
      * @return int
      */
-    int getNumberOfNode() const
-    {
+    int getNumberOfNode() const {
         return numberOfNode + 1;
     }
 
@@ -158,10 +143,8 @@ public:
      * @param nodeNum node num
      * @return T value
      */
-    T getValue(int nodeNum) const
-    {
-        if (!isNode(nodeNum))
-        {
+    T getValue(int nodeNum) const {
+        if (!isNode(nodeNum)) {
             throw std::invalid_argument("no such edge");
         }
         return nodes[nodeNum].getValue();;
@@ -173,16 +156,15 @@ public:
      * @return true
      * @return false
      */
-    bool isEmpty()
-    {
+    bool isEmpty() {
         return matrix.empty();
     }
+
     /**
      * @brief clear matrix
      *
      */
-    void clear()
-    {
+    void clear() {
         nodes.clear();
         matrix.clear();
         numberOfEdge = 0;
@@ -194,18 +176,13 @@ public:
      * @param graph graph
      * @return true of false
      */
-    bool operator==(const Graph &graph)
-    {
+    bool operator==(const Graph &graph) {
         if (this->numberOfNode != graph.numberOfNode || this->numberOfEdge != graph.numberOfEdge)
             return false;
-        for (size_t i = 0; i < numberOfNode + 1; i++)
-        {
-            if(nodes[i].getValue() != graph.getValue(i))
-            return false;
-
-            for (size_t j = 0; j < numberOfNode + 1; j++)
-            {
-
+        for (size_t i = 0; i < numberOfNode + 1; i++) {
+            if (nodes[i].getValue() != graph.getValue(i))
+                return false;
+            for (size_t j = 0; j < numberOfNode + 1; j++) {
                 if (this->matrix[i][j] != graph.matrix[i][j])
                     return false;
             }
@@ -218,8 +195,7 @@ public:
      * @param graph graph
      * @return true of false
      */
-    bool operator!=(const Graph &graph)
-    {
+    bool operator!=(const Graph &graph) {
         return !operator==(graph);
     }
 
@@ -229,17 +205,16 @@ public:
      * @param to second node
      * @return pair<first degree, second degree>
      */
-    std::pair<int,int> getEdgeDegree(int from, int to){
-        if(!isNode(from) || !isNode(to))
+    std::pair<int, int> getEdgeDegree(int from, int to) {
+        if (!isNode(from) || !isNode(to))
             throw std::out_of_range("no such node");
-        if(!isEdge(from, to))
+        if (!isEdge(from, to))
             throw std::invalid_argument("no such edge");
-        std::pair<int,int> degree(getNodeDegree(from),getNodeDegree(to));
-         return degree;
+        std::pair<int, int> degree(getNodeDegree(from), getNodeDegree(to));
+        return degree;
     }
 
-    class NodeAdjacentIterator
-    {
+    class NodeAdjacentIterator {
     private:
         Node<T> current;
         std::vector<Node<T>> adjacentNodes;
@@ -252,16 +227,12 @@ public:
          * @param nodeNum number of node
          * @param graph graph
          */
-        NodeAdjacentIterator(int nodeNum, Graph &graph)
-        {
-            if(!graph.isNode(nodeNum))
+        NodeAdjacentIterator(int nodeNum, Graph &graph) {
+            if (!graph.isNode(nodeNum))
                 throw std::out_of_range("no such node");
 
-            adjacentNodes.push_back(graph.nodes[nodeNum]);
-            for (int i = 0; i < graph.getNumberOfNode(); i++)
-            {
-                if (graph.isEdge(nodeNum, i))
-                {
+            for (int i = 0; i < graph.getNumberOfNode(); i++) {
+                if (graph.isEdge(nodeNum, i)) {
                     adjacentNodes.push_back(graph.nodes[i]);
                 }
             }
@@ -272,8 +243,7 @@ public:
          * @brief set current on first node
          *
          */
-        void begin()
-        {
+        void begin() {
             current = adjacentNodes[0];
         }
 
@@ -281,20 +251,19 @@ public:
          * @brief set current on next node
          *
          */
-        void next()
-        {
+        void next() {
             position++;
             if (position > adjacentNodes.size() - 1)
                 throw std::out_of_range("no such node");
 
             current = adjacentNodes[position];
         }
+
         /**
          * @brief set current on previous node
          *
          */
-        void back()
-        {
+        void back() {
             position--;
             if (position < 0)
                 throw std::out_of_range("no such node");
@@ -308,21 +277,20 @@ public:
          * @param n number of nodes
          * @details set current on +n nodes
          */
-        void operator+(int n)
-        {
+        void operator+(int n) {
             position += n;
             if (position > adjacentNodes.size() - 1)
                 throw std::out_of_range("no such node");
             current = adjacentNodes[position];
         }
+
         /**
          * @brief operator -
          *
          * @param n number of nodes
          * @details set current on -n nodes
          */
-        void operator-(int n)
-        {
+        void operator-(int n) {
             position -= n;
             if (position < 0)
                 throw std::out_of_range("no such node");
@@ -334,32 +302,29 @@ public:
          *
          * @return node
          */
-        Node<T> getCurrent()
-        {
+        Node<T> getCurrent() {
             return current;
         }
     };
-    
 
-    class NodeIteratorConst{
-        protected:
+
+    class NodeIteratorConst {
+    protected:
         Node<T> current;
         std::vector<Node<T>> nodes;
         int position = 0;
-        Graph* graph;
-        public:
+        Graph *graph;
+    public:
         /**
          * @brief Construct a new Node Iterator Const object
          *
          * @param nodeNum number of node
          * @param graph graph
          */
-        NodeIteratorConst(Graph &graph)
-        {
+        NodeIteratorConst(Graph &graph) {
             this->graph = &graph;
-            for (int i = 0; i < graph.getNumberOfNode(); i++)
-            {
-                    nodes.push_back(graph.nodes[i]);
+            for (int i = 0; i < graph.getNumberOfNode(); i++) {
+                nodes.push_back(graph.nodes[i]);
             }
             current = nodes[0];
         }
@@ -368,8 +333,7 @@ public:
          * @brief set current on first node
          *
          */
-        void begin()
-        {
+        void begin() {
             current = nodes[0];
         }
 
@@ -377,20 +341,19 @@ public:
          * @brief set current on next node
          *
          */
-        void next()
-        {
+        void next() {
             position++;
             if (position > nodes.size() - 1)
                 throw std::out_of_range("no such node");
 
             current = nodes[position];
         }
+
         /**
          * @brief set current on previous node
          *
          */
-        void back()
-        {
+        void back() {
             position--;
             if (position < 0)
                 throw std::out_of_range("no such node");
@@ -404,76 +367,77 @@ public:
          * @param n number of nodes
          * @details set current on +n nodes
          */
-        void operator+(int n)
-        {
+        void operator+(int n) {
             position += n;
             if (position > nodes.size() - 1)
                 throw std::out_of_range("no such node");
             current = nodes[position];
         }
+
         /**
          * @brief operator -
          *
          * @param n number of nodes
          * @details set current on -n nodes
          */
-        void operator-(int n)
-        {
+        void operator-(int n) {
             position -= n;
             if (position < 0)
                 throw std::out_of_range("no such node");
             current = nodes[position];
         }
+
         /**
          * check has next
          * @return true or false
          */
-        bool hasNext(){
+        bool hasNext() {
             return (position + 1 <= nodes.size() - 1);
         }
+
         /**
          * check has prev
          * @return true or false
          */
-        bool hasPrev(){
+        bool hasPrev() {
             return (position - 1 >= 0);
         }
+
         /**
          * @brief Get the Current iterator
          *
          * @return node
          */
-        Node<T> getCurrent()
-        {
+        Node<T> getCurrent() {
             return current;
         }
 
     };
 
     class NodeIterator : public NodeIteratorConst {
-        public:
+    public:
         /**
          * Node Iterator constructor
          * @param graph graph
          */
-        NodeIterator(Graph& graph):NodeIteratorConst(graph){}
+        NodeIterator(Graph &graph) : NodeIteratorConst(graph) {}
 
         /**
          * delete node by Node Iterator
          */
-        void deleteNode(){
+        void deleteNode() {
             int temp = NodeIteratorConst::position;
             if (NodeIteratorConst::hasNext())
-            NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position+1];
-            else if (NodeIteratorConst::hasPrev()){
-            NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position-1];
-            temp-=1;
+                NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position + 1];
+            else if (NodeIteratorConst::hasPrev()) {
+                NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position - 1];
+                temp -= 1;
+            } else {
+                temp = -1;
+                NodeIteratorConst::current = NULL;
             }
-            else 
-            {temp = -1;
-            NodeIteratorConst::current = NULL;}
             NodeIteratorConst::graph->deleteNode(NodeIteratorConst::position);
-            NodeIteratorConst::nodes.erase(NodeIteratorConst::nodes.begin()+NodeIteratorConst::position);
+            NodeIteratorConst::nodes.erase(NodeIteratorConst::nodes.begin() + NodeIteratorConst::position);
             NodeIteratorConst::position = temp;
         }
 
@@ -481,68 +445,66 @@ public:
          * change value by node iterator
          * @param value value
          */
-        void setValue(T value){
+        void setValue(T value) {
             NodeIteratorConst::graph->nodes[NodeIteratorConst::position].setValue(value);
             NodeIteratorConst::nodes[NodeIteratorConst::position].setValue(value);
             NodeIteratorConst::current = NodeIteratorConst::nodes[NodeIteratorConst::position];
         }
     };
 
-    class ReverseNodeIterator : public NodeIterator{
-        public:
+    class ReverseNodeIterator : public NodeIterator {
+    public:
         /**
          * constructor Reverse node iterator
          * @param graph
          */
-        ReverseNodeIterator(Graph& graph):NodeIterator(graph){
+        ReverseNodeIterator(Graph &graph) : NodeIterator(graph) {
             std::vector<Node<T>> temp = NodeIteratorConst::nodes;
             NodeIteratorConst::nodes.clear();
-            for (int  i = temp.size()-1; i >=0 ; i--)
-            {
+            for (int i = temp.size() - 1; i >= 0; i--) {
                 NodeIteratorConst::nodes.push_back(temp[i]);
             }
-            
+
         }
     };
 
-    class ReverseNodeAdjacentIterator : public NodeAdjacentIterator{
+    class ReverseNodeAdjacentIterator : public NodeAdjacentIterator {
     public:
         /**
          * constructor of Reverse Adjacent Iterator
          * @param nodeNum number of node
          * @param graph graph
          */
-        ReverseNodeAdjacentIterator(int nodeNum, Graph &graph):NodeAdjacentIterator(nodeNum,graph){
+        ReverseNodeAdjacentIterator(int nodeNum, Graph &graph) : NodeAdjacentIterator(nodeNum, graph) {
             std::vector<Node<T>> temp = NodeAdjacentIterator::adjacentNodes;
             NodeIteratorConst::adjacentNodes.clear();
-            for (int  i = temp.size()-1; i >=0 ; i--)
-            {
+            for (int i = temp.size() - 1; i >= 0; i--) {
                 NodeIteratorConst::adjacentNodes.push_back(temp[i]);
             }
         }
     };
 
-    class EdgeIteratorConst{
-        protected:
+    class AdjacentEdgeIteratorConst {
+    protected:
         std::vector<int> numberEdge;
         int nodeNum;
         int position = 0;
-        Graph* graph;
-        public:
+        Graph *graph;
+    public:
         /**
          * constructor of Edge Iterator Const
          * @param nodeNum number of node
          * @param graph graph
          */
-        EdgeIteratorConst(int nodeNum, Graph& graph){
+        AdjacentEdgeIteratorConst(int nodeNum, Graph &graph) {
             this->graph = &graph;
-            if(!graph.isNode(nodeNum))
-            throw std::out_of_range("no such node");
+            if (!graph.isNode(nodeNum))
+                throw std::out_of_range("no such node");
             this->nodeNum = nodeNum;
             this->graph = &graph;
-            for(int i = 0; i < graph.matrix[nodeNum].size(); i++){
-                if(graph.matrix[nodeNum][i] == 1)
-                numberEdge.push_back(i);
+            for (int i = 0; i < graph.matrix[nodeNum].size(); i++) {
+                if (graph.matrix[nodeNum][i] == 1)
+                    numberEdge.push_back(i);
             }
         }
 
@@ -550,96 +512,196 @@ public:
          * check has next
          * @return true or false
          */
-        bool hasNext(){
-            return (position+1 <= numberEdge.size()-1);
+        bool hasNext() {
+            return (position + 1 <= numberEdge.size() - 1);
         }
+
         /**
          * check has prev
          * @return true or false
          */
-        bool hasPrev(){
-            return (position-1 >= 0);
+        bool hasPrev() {
+            return (position - 1 >= 0);
         }
 
         /**
          * next edge
          */
-        void next(){
+        void next() {
             if (!hasNext())
                 throw std::out_of_range("no such edge");
             position++;
         }
+
         /**
          * prev edge
          */
-        void back(){
+        void back() {
             if (!hasPrev())
                 throw std::out_of_range("no such edge");
             position--;
         }
+
         /**
          * get value
          * @return pair<value of first node, value of second node>
          */
-        std::pair<T,T> getValue(){
-            std::pair<T,T> value(graph->nodes[nodeNum].getValue(),graph->nodes[numberEdge[position]].getValue());
+        std::pair<T, T> getValue() {
+            std::pair<T, T> value(graph->nodes[nodeNum].getValue(), graph->nodes[numberEdge[position]].getValue());
             return value;
         }
     };
 
-    class EdgeIterator : public EdgeIteratorConst{
-        public:
+    class AdjacentEdgeIterator : public AdjacentEdgeIteratorConst {
+    public:
         /**
          * constructor of Edge Iterator
          * @param nodeNum number of node
          * @param graph graph
          */
-        EdgeIterator(int nodeNum, Graph& graph):EdgeIteratorConst(nodeNum,graph){}
+        AdjacentEdgeIterator(int nodeNum, Graph &graph) : AdjacentEdgeIteratorConst(nodeNum, graph) {}
 
         /**
          * delete edge by edge iterator
          */
-        void deleteEdge(){
-            int temp = EdgeIteratorConst::position;
-            if (EdgeIteratorConst::hasPrev())
-                temp-=1;
-            else 
-            temp = -1;
-            EdgeIteratorConst::graph->deleteEdge(EdgeIteratorConst::nodeNum ,EdgeIteratorConst::position);
-            EdgeIteratorConst::numberEdge.erase(EdgeIteratorConst::numberEdge.begin()+EdgeIteratorConst::position);
-            EdgeIteratorConst::position = temp;
+        void deleteEdge() {
+            int temp = AdjacentEdgeIteratorConst::position;
+            if (AdjacentEdgeIteratorConst::hasPrev())
+                temp -= 1;
+            else
+                temp = -1;
+            AdjacentEdgeIteratorConst::graph->deleteEdge(AdjacentEdgeIteratorConst::nodeNum, AdjacentEdgeIteratorConst::position);
+            AdjacentEdgeIteratorConst::numberEdge.erase(AdjacentEdgeIteratorConst::numberEdge.begin() + AdjacentEdgeIteratorConst::position);
+            AdjacentEdgeIteratorConst::position = temp;
         }
     };
-    class ReversEdgeIterator : public EdgeIterator{
+
+    class AdjacentReversEdgeIterator : public AdjacentEdgeIterator {
         /**
          * constructor Reverse edge iterator
          * @param nodeNum number of node
          * @param graph graph
          */
-        ReversEdgeIterator(int nodeNum, Graph& graph):EdgeIterator(nodeNum,graph){
-            std::vector<int> temp = EdgeIterator::nodeNum;
-            EdgeIterator::nodeNum.clear();
-            for (const auto& edge : temp)
-            {
-                EdgeIterator::nodeNum.push_back(edge);
+        AdjacentReversEdgeIterator(int nodeNum, Graph &graph) : AdjacentEdgeIterator(nodeNum, graph) {
+            std::vector<int> temp = AdjacentEdgeIterator::nodeNum;
+            AdjacentEdgeIterator::nodeNum.clear();
+            for (const auto &edge : temp) {
+                AdjacentEdgeIterator::nodeNum.push_back(edge);
             }
         }
     };
+    class EdgeIteratorConst {
+    protected:
+        std::vector<std::pair<int,int>> numberEdge;
+        int position = 0;
+        Graph *graph;
+    public:
+        /**
+         * constructor of Edge Iterator Const
+         * @param nodeNum number of node
+         * @param graph graph
+         */
+        EdgeIteratorConst(Graph &graph) {
+            this->graph = &graph;
+            this->graph = &graph;
+            for (int i = 0; i < graph.matrix.size(); i++) {
+                for (int j = 0; j < graph.matrix[i].size(); ++j) {
+                    if (graph.matrix[i][j] == 1)
+                        numberEdge.push_back(std::make_pair(i,j));
+                }
+            }
+        }
 
-    private:
+        /**
+         * check has next
+         * @return true or false
+         */
+        bool hasNext() {
+            return (position + 1 <= numberEdge.size() - 1);
+        }
+
+        /**
+         * check has prev
+         * @return true or false
+         */
+        bool hasPrev() {
+            return (position - 1 >= 0);
+        }
+
+        /**
+         * next edge
+         */
+        void next() {
+            if (!hasNext())
+                throw std::out_of_range("no such edge");
+            position++;
+        }
+
+        /**
+         * prev edge
+         */
+        void back() {
+            if (!hasPrev())
+                throw std::out_of_range("no such edge");
+            position--;
+        }
+
+        /**
+         * get value
+         * @return pair<value of first node, value of second node>
+         */
+        std::pair<T, T> getValue() {
+            std::pair<T, T> value(graph->nodes[numberEdge[position].first].getValue(), graph->nodes[numberEdge[position].second].getValue());
+            return value;
+        }
+    };
+    class EdgeIterator : public EdgeIteratorConst {
+    public:
+        /**
+         * constructor of Edge Iterator
+         * @param nodeNum number of node
+         * @param graph graph
+         */
+        EdgeIterator( Graph &graph) : EdgeIteratorConst(graph) {}
+
+        /**
+         * delete edge by edge iterator
+         */
+        void deleteEdge() {
+            int temp = EdgeIteratorConst::position;
+            if (EdgeIteratorConst::hasPrev())
+                temp -= 1;
+            else
+                temp = -1;
+            EdgeIteratorConst::graph->deleteEdge(EdgeIteratorConst::numberEdge[EdgeIteratorConst::position].first, EdgeIteratorConst::numberEdge[EdgeIteratorConst::position].second);
+            EdgeIteratorConst::numberEdge.erase(EdgeIteratorConst::numberEdge.begin() + EdgeIteratorConst::position);
+            EdgeIteratorConst::position = temp;
+        }
+    };
+
+    class ReversEdgeIterator : public EdgeIterator {
+        /**
+         * constructor Reverse edge iterator
+         * @param nodeNum number of node
+         * @param graph graph
+         */
+        ReversEdgeIterator(Graph &graph) : EdgeIterator(graph) {
+            std::reverse(EdgeIteratorConst::numberEdge.begin(), EdgeIteratorConst::numberEdge.end());
+        }
+    };
+
+private:
     /**
      * @brief check is node in matrix
      *
      * @param nodeNum number of node
      */
-    bool isNode(int nodeNum) const
-    {
-        return (nodeNum < 0 || nodeNum > numberOfNode)
-        if (nodeNum < 0 || nodeNum > numberOfNode)
-            return false;
-        return true;
+    bool isNode(int nodeNum) const {
+        return (nodeNum > 0 || nodeNum < numberOfNode);
+
     }
-    public:
+
+public:
     /**
      * @brief check is edge in graph
      *
@@ -648,29 +710,26 @@ public:
      * @return true
      * @return false
      */
-    bool isEdge(int from, int to) const
-    {
+    bool isEdge(int from, int to) const {
+        if (!isNode(from) || !isNode(to))
+            throw std::out_of_range("no such node");
         return matrix[from][to] != 0;
     }
 };
-    /**
-     * @brief operator <<
-     *
-     * @param os
-     * @param graph
-     * @return std::ostream&
-     */
-template <typename Temp>
-std::ostream &operator<<(std::ostream &os, Graph<Temp> &graph)
-{
-    for (size_t i = 0; i < graph.getNumberOfNode(); i++)
-    {
-        for (size_t j = 0; j < graph.getNumberOfNode(); j++)
-        {
+
+/**
+ * @brief operator <<
+ *
+ * @param os
+ * @param graph
+ * @return std::ostream&
+ */
+template<typename Temp>
+std::ostream &operator<<(std::ostream &os, Graph<Temp> &graph) {
+    for (size_t i = 0; i < graph.getNumberOfNode(); i++) {
+        for (size_t j = 0; j < graph.getNumberOfNode(); j++) {
             if (graph.isEdge(i, j))
-            {
                 os << i << " -> " << j << "\n";
-            }
         }
     }
 
