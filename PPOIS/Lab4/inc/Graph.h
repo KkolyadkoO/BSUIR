@@ -144,9 +144,8 @@ public:
      * @return T value
      */
     T getValue(int nodeNum) const {
-        if (!isNode(nodeNum)) {
+        if (!isNode(nodeNum)) 
             throw std::invalid_argument("no such edge");
-        }
         return nodes[nodeNum].getValue();;
     }
 
@@ -232,9 +231,8 @@ public:
                 throw std::out_of_range("no such node");
 
             for (int i = 0; i < graph.getNumberOfNode(); i++) {
-                if (graph.isEdge(nodeNum, i)) {
+                if (graph.isEdge(nodeNum, i))
                     adjacentNodes.push_back(graph.nodes[i]);
-                }
             }
             current = adjacentNodes[0];
         }
@@ -295,6 +293,21 @@ public:
             if (position < 0)
                 throw std::out_of_range("no such node");
             current = adjacentNodes[position];
+        }
+        /**
+         * check has next
+         * @return true or false
+         */
+        bool hasNext() {
+            return (position + 1 <= adjacentNodes.size() - 1);
+        }
+
+        /**
+         * check has prev
+         * @return true or false
+         */
+        bool hasPrev() {
+            return (position - 1 >= 0);
         }
 
         /**
