@@ -41,15 +41,15 @@ TEST(GRAPH_Test, AdjacentIterator)
   test.addEdge(0,1);
   Graph<int>::NodeAdjacentIterator it(0,test);
   it.begin();
-  EXPECT_TRUE(it.getCurrent().getValue() == 4);
+  EXPECT_TRUE(it.getCurrent() == 4);
   it.next();
-  EXPECT_TRUE(it.getCurrent().getValue() == 3);
+  EXPECT_TRUE(it.getCurrent() == 3);
   it.back();
-  EXPECT_TRUE(it.getCurrent().getValue() == 4);
+  EXPECT_TRUE(it.getCurrent() == 4);
   it+1;
-  EXPECT_TRUE(it.getCurrent().getValue() == 3);
+  EXPECT_TRUE(it.getCurrent() == 3);
   it-1;
-  EXPECT_TRUE(it.getCurrent().getValue() == 4);
+  EXPECT_TRUE(it.getCurrent() == 4);
 }
 
 TEST(GRAPH_Test, operators)

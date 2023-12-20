@@ -316,7 +316,7 @@ public:
          * @return node
          */
         Node<T> getCurrent() {
-            return current;
+            return current.getValue();
         }
     };
 
