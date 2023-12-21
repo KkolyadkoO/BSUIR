@@ -298,9 +298,9 @@ public:
          * @details set current on +n nodes
          */
         void operator+(int n) {
-            position += n;
-            if (position > adjacentNodes.size() - 1)
+            if (position + n > adjacentNodes.size() - 1)
                 throw std::out_of_range("no such node");
+            position += n;
             current = adjacentNodes[position];
         }
 
@@ -311,9 +311,9 @@ public:
          * @details set current on -n nodes
          */
         void operator-(int n) {
-            position -= n;
-            if (position < 0)
+            if (position - n < 0)
                 throw std::out_of_range("no such node");
+            position -= n;
             current = adjacentNodes[position];
         }
         /**
