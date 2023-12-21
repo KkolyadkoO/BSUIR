@@ -7,7 +7,8 @@
 template <typename T>
 class Node{
 private:
-    T value;
+    T value = T();
+    int uniqueName;
 public:
 
     /**
@@ -15,8 +16,12 @@ public:
      * 
      * @param value_ value
      */
-    Node( T value_ = T()): value(value_){}
+    Node( int uniqueName_, T value_ = T()): value(value_), uniqueName(uniqueName_){}
+    Node(T value_ = T()): value(value_){}
 
+    int getUniqueName(){
+        return uniqueName;
+    }
     /**
      * @brief Get the Value object
      * 
@@ -45,7 +50,7 @@ public:
      * @return false 
      */
     bool operator==(const Node &node){
-        return node.value == value;
+        return node.value == value && node.uniqueName == uniqueName;
     }
     /**
      * @brief operator !=
@@ -55,7 +60,7 @@ public:
      * @return false 
      */
     bool operator!=(const Node &node){
-        return node.value != value;
+        return !operator==(node);
     }
 
 

@@ -11,8 +11,8 @@ TEST(GRAPH_Test, empty)
 TEST(GRAPH_Test, Node)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
+  test.addNode(5,1);
+  test.addNode(4,2);
   EXPECT_EQ(2, test.getNumberOfNode());
   test.deleteNode(1);
   EXPECT_EQ(1, test.getNumberOfNode());
@@ -21,8 +21,8 @@ TEST(GRAPH_Test, Node)
 TEST(GRAPH_Test, Edge)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
+  test.addNode(5,1);
+  test.addNode(4,2);
   EXPECT_EQ(0, test.getNumberOfEdge());
   test.addEdge(0, 1);
   EXPECT_EQ(4, test.getValue(1));
@@ -34,9 +34,9 @@ TEST(GRAPH_Test, Edge)
 TEST(GRAPH_Test, AdjacentIterator)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
-  test.addNode(3);
+  test.addNode(5,1);
+  test.addNode(4,2);
+  test.addNode(3,3);
   test.addEdge(0,2);
   test.addEdge(0,1);
   Graph<int>::NodeAdjacentIterator it(0,test);
@@ -56,12 +56,12 @@ TEST(GRAPH_Test, operators)
 {
   Graph<int> test1;
   Graph<int> test2;
-  test1.addNode(5);
-  test1.addNode(4);
-  test1.addNode(3);
-  test2.addNode(5);
-  test2.addNode(4);
-  test2.addNode(3);
+  test1.addNode(5,1);
+  test1.addNode(4,2);
+  test1.addNode(3,3);
+  test2.addNode(5,1);
+  test2.addNode(4,2);
+  test2.addNode(4,3);
   EXPECT_TRUE(test1 == test2);
   test2.deleteNode(2);
   EXPECT_TRUE(test1 != test2);
@@ -75,9 +75,9 @@ TEST(GRAPH_Test, operators)
 TEST(GRAPH_Test, NodeIteratorConst)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
-  test.addNode(3);
+  test.addNode(5,1);
+  test.addNode(4,2);
+  test.addNode(3,3);
   test.addEdge(0,2);
   test.addEdge(0,1);
   Graph<int>::NodeIteratorConst it(test);
@@ -95,9 +95,9 @@ TEST(GRAPH_Test, NodeIteratorConst)
 TEST(GRAPH_Test, NodeIterator)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
-  test.addNode(3);
+  test.addNode(5,1);
+  test.addNode(4,2);
+  test.addNode(3,3);
   test.addEdge(0,2);
   test.addEdge(0,1);
   Graph<int>::NodeIterator it(test);
@@ -120,9 +120,9 @@ TEST(GRAPH_Test, NodeIterator)
 TEST(GRAPH_Test, RNodeIterator)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
-  test.addNode(3);
+  test.addNode(5,1);
+  test.addNode(4,2);
+  test.addNode(3,3);
   Graph<int>::ReverseNodeIterator it(test);
   it.begin();
   EXPECT_TRUE(it.getCurrent().getValue() == 3);
@@ -131,9 +131,9 @@ TEST(GRAPH_Test, RNodeIterator)
 TEST(GRAPH_Test, AdjacentEdgeIteratorConst)
 {
   Graph<int> test;
-  test.addNode(5);
-  test.addNode(4);
-  test.addNode(3);
+  test.addNode(5,1);
+  test.addNode(4,2);
+  test.addNode(3,3);
   test.addEdge(0,1);
   test.addEdge(0,2);
   Graph<int>::AdjacentEdgeIteratorConst it(0, test);

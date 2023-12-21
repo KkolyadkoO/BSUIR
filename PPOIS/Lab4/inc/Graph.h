@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
+#include <set>
 #include "Node.h"
 
 template<typename T>
@@ -18,6 +19,7 @@ private:
     Matrix matrix;
     int numberOfNode = -1;
     int numberOfEdge = 0;
+    std::set<int> uniqueName;
 public:
     Graph() {}
 
@@ -25,8 +27,10 @@ public:
      * add new node
      * @param value value
      */
-    void addNode(T value) {
-        Node<T> temp(value);
+    void addNode(T value, int uniqueName) {
+        if(!this->uniqueName.insert(uniqueName).second)
+            throw "Node with such unique name is already exists";
+        Node<T> temp(uniqueName,value);
         nodes.push_back(temp);
         numberOfNode++;
         for (auto &node : matrix) {
@@ -99,6 +103,7 @@ public:
             for (auto &node : matrix) {
                 node.erase(node.begin() + nodeNum);
             }
+            uniqueName.erase(nodes[nodeNum].getUniqueName());
             nodes.erase(nodes.begin() + nodeNum);
             numberOfNode--;
         } else {
@@ -178,13 +183,30 @@ public:
     bool operator==(const Graph &graph) {
         if (this->numberOfNode != graph.numberOfNode || this->numberOfEdge != graph.numberOfEdge)
             return false;
-        for (size_t i = 0; i < numberOfNode + 1; i++) {
-            if (nodes[i].getValue() != graph.getValue(i))
-                return false;
-            for (size_t j = 0; j < numberOfNode + 1; j++) {
-                if (this->matrix[i][j] != graph.matrix[i][j])
-                    return false;
+        bool flag = false;
+        for(int i = 0; i< numberOfNode; i++){
+            for (size_t j = 0; j < graph.numberOfNode; j++)
+            {
+                if(nodes[i] == graph.nodes[j])
+                    flag = true;
             }
+            if(!flag)
+                return false;
+            flag = false;
+        }
+        int nodeNumber1;
+        int nodeNumber2;
+
+        for (size_t i = 0; i < numberOfNode; i++)
+        {
+            nodeNumber1 = findNumberInSecond(graph, i);
+            for (size_t j = 0; j < numberOfNode; j++)
+            {
+                nodeNumber2 = findNumberInSecond(graph, j);
+                if(matrix[i][j] != graph.matrix[nodeNumber1][nodeNumber2])
+                return false;
+            }
+            
         }
         return true;
     }
@@ -315,7 +337,7 @@ public:
          *
          * @return node
          */
-        Node<T> getCurrent() {
+        int getCurrent() {
             return current.getValue();
         }
     };
@@ -447,7 +469,6 @@ public:
                 temp -= 1;
             } else {
                 temp = -1;
-                NodeIteratorConst::current = NULL;
             }
             NodeIteratorConst::graph->deleteNode(NodeIteratorConst::position);
             NodeIteratorConst::nodes.erase(NodeIteratorConst::nodes.begin() + NodeIteratorConst::position);
@@ -712,6 +733,16 @@ private:
     bool isNode(int nodeNum) const {
         return (nodeNum > 0 || nodeNum < numberOfNode);
 
+    }
+
+    int findNumberInSecond(const Graph &graph, int i){
+        int nodeNumber;
+        for(size_t j = 0; j < graph.numberOfNode; j++)
+            {
+                if(nodes[i] == graph.nodes[j])
+                    nodeNumber = j;
+            }
+        return nodeNumber;
     }
 
 public:
