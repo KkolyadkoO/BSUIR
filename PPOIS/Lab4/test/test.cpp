@@ -146,3 +146,16 @@ TEST(GRAPH_Test, AdjacentEdgeIteratorConst)
   std::pair<int,int> p1(5,4); 
   EXPECT_TRUE(it.getValue() == p1);
 }
+
+TEST(GRAPH_Test, Test)
+{
+  Graph<int> test;
+  Graph<int>::NodeIterator it(test);
+  try{
+  it-100000;}
+  catch(...){
+
+  }
+  it.setValue(1);
+  
+}
